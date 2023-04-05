@@ -1,6 +1,6 @@
-﻿using PixelCombats.Domain.DTO.Room.GameMode;
-using PixelCombats.Domain.DTO.Room.Map;
-using PixelCombats.Domain.DTO.Room.MapLists;
+﻿using PixelCombats.DTO.Room.GameMode;
+using PixelCombats.DTO.Room.Map;
+using PixelCombats.DTO.Room.MapLists;
 
 namespace PixelCombats.Api.Client.MainMenu.Services.RoomConstructor
 {

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using PixelCombats.Domain.DTO.Room.Map;
+﻿using PixelCombats.DTO.Room.Map;
+using System.Collections.Generic;
 
 namespace PixelCombats.Api.Basic.MapSources
 {

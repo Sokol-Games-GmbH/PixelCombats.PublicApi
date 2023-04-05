@@ -1,6 +1,6 @@
-﻿using PixelCombats.Domain.DTO.Room.GameMode;
-using System.Threading.Tasks;
-using PixelCombats.Domain.DTO.Room.Map;
+﻿using System.Threading.Tasks;
+using PixelCombats.DTO.Room.GameMode;
+using PixelCombats.DTO.Room.Map;
 
 namespace PixelCombats.Api.Client.MainMenu.Services.RoomList
 {

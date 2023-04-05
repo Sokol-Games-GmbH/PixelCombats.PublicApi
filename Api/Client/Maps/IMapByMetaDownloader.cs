@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using PixelCombats.Domain.DTO.Room.Map;
+using PixelCombats.DTO.Room.Map;
 
 namespace PixelCombats.Api.Client.Maps
 {

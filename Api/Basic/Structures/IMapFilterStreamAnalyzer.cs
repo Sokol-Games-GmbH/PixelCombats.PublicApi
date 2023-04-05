@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using PixelCombats.Domain.DTO;
+using PixelCombats.DTO;
 
 namespace PixelCombats.Api.Basic.Structures
 {

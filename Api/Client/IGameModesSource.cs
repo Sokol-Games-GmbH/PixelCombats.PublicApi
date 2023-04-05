@@ -1,6 +1,6 @@
 ﻿using PixelCombats.Api.RoomServer.Basic;
 using System.Collections.Generic;
-using PixelCombats.Domain.DTO.Room.GameMode;
+using PixelCombats.DTO.Room.GameMode;
 
 namespace PixelCombats.Api.Client
 {

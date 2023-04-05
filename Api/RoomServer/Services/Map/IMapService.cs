@@ -1,6 +1,6 @@
 ﻿using PixelCombats.Api.Basic;
 using PixelCombats.Api.RoomServer.Basic;
-using PixelCombats.Domain.DTO.Room.Map;
+using PixelCombats.DTO.Room.Map;
 
 namespace PixelCombats.Api.RoomServer.Services.Map
 {

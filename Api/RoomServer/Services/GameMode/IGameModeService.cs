@@ -1,5 +1,5 @@
 ﻿using PixelCombats.Api.Basic;
-using PixelCombats.Domain.DTO.Room.GameMode;
+using PixelCombats.DTO.Room.GameMode;
 
 namespace PixelCombats.Api.RoomServer.Services.GameMode
 {

@@ -1,6 +1,7 @@
 ﻿using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Services.Build;
 using PixelCombats.Api.RoomServer.Services.Damage;
+using PixelCombats.Api.RoomServer.Services.DefaultPropertiesContexted;
 using PixelCombats.Api.RoomServer.Services.Inventory;
 using PixelCombats.Api.RoomServer.Services.Properties;
 using PixelCombats.Api.RoomServer.Services.Spawn;
@@ -70,6 +71,10 @@ namespace PixelCombats.Api.RoomServer.Services.Players
 		/// контекст пользовательского интерфейса
 		/// </summary>
 		IPlayerUIContext Ui { get; }
+		/// <summary>
+		/// контекстные свойства
+		/// </summary>
+		IPlayerContextedPropertiesContext ContextedProperties { get; }
 
 		/// <summary>
 		/// сменился онлайн

@@ -3,6 +3,7 @@ using PixelCombats.Api.Basic.Structures.Math;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Services.Build;
 using PixelCombats.Api.RoomServer.Services.Damage;
+using PixelCombats.Api.RoomServer.Services.DefaultPropertiesContexted;
 using PixelCombats.Api.RoomServer.Services.Inventory;
 using PixelCombats.Api.RoomServer.Services.Players;
 using PixelCombats.Api.RoomServer.Services.Properties;
@@ -70,6 +71,10 @@ namespace PixelCombats.Api.RoomServer.Services.Teams
 		/// контекст пользовательского интерфейса
 		/// </summary>
 		ITeamUIContext Ui { get; }
+		/// <summary>
+		/// контекстные свойства
+		/// </summary>
+		ITeamContextedPropertiesContext ContextedProperties { get; }
 
 		/// <summary>
 		/// сколько игроков в команде
