@@ -51,6 +51,10 @@ namespace PixelCombats.Api.RoomServer.Services.DefaultPropertiesContexted
 		/// тип инвентаря
 		/// </summary>
 		IApiProp<InventoryTypes, IContextedPropertiesContext> InventoryType { get; }
+		/// <summary>
+		/// максимальный запас HP
+		/// </summary>
+		IApiProp<float, IContextedPropertiesContext> MaxHp { get; }
 	}
 
 	/// <summary>
