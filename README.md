@@ -1,4 +1,4 @@
-# PixelCombatsPiblicApi
+# PixelCombatsPublicApi
 ## Публичный API игры PixelCombats
 * Используя данный апи можно писать свои режимы в игре.
 * По багам и предложениям по API открываем соответствующие issue
