@@ -7,7 +7,7 @@
 1. Ищем официальный режим в игре (можно и не офиц, но лижбы репозиторий был открыт)
 1. Находим в игре кнопку со ссылкой на репозиторий и кликаем, откроется репозиторий режима. Там можно посмотреть все файлы режима и что там и как сделано.
    <br>Для примера вот наши официальные репозитории:
-    - [DTM](https://github.com/kkohno/PixelCombats.GameModes.TDM)
+    - [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM)
     - [Мир](https://github.com/kkohno/PixelCombats.GameModes.Peace)
     - [Редактор Карт](https://github.com/kkohno/PixelCombats.GameModes.Editor)
     - [Паркур](https://github.com/kkohno/PixelCombats.GameModes.Parcour)
