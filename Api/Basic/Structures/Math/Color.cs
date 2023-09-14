@@ -3,15 +3,31 @@ using System;
 
 namespace PixelCombats.Api.Basic.Structures.Math
 {
+	/// <summary>
+	/// описывает цвет
+	/// </summary>
 	[Serializable]
 	public struct Color
 	{
+		/// <summary>
+		/// красная составляющая. Диапазон значений [0-1]
+		/// </summary>
 		[SerializeMember(1)]
 		public float r;
+		/// <summary>
+		/// зеленая составляющая. Диапазон значений [0-1]
+		/// </summary>
 		[SerializeMember(2)]
 		public float g;
+		/// <summary>
+		/// синяя составляющая. Диапазон значений [0-1]
+		/// </summary>
 		[SerializeMember(3)]
 		public float b;
+		/// <summary>
+		/// прозрачность. Диапазон значений [0-1]
+		/// <para>не везде применяется</para>
+		/// </summary>
 		[SerializeMember(4)]
 		public float a;
 
