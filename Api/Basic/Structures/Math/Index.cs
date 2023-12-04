@@ -31,6 +31,10 @@ namespace PixelCombats.Api.Basic.Structures.Math
 			this.y = y;
 			this.z = z;
 		}
+		public Vector3 ToVector()
+		{
+			return new Vector3(x, y, z);
+		}
 		public static bool operator ==(Index a, Index b)
 		{
 			return a.x == b.x && a.y == b.y && a.z == b.z;

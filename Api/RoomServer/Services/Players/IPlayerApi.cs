@@ -1,4 +1,5 @@
-﻿using PixelCombats.Api.RoomServer.Basic;
+﻿using PixelCombats.Api.Basic.Structures.Math;
+using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Services.Build;
 using PixelCombats.Api.RoomServer.Services.Damage;
 using PixelCombats.Api.RoomServer.Services.DefaultPropertiesContexted;
@@ -42,6 +43,28 @@ namespace PixelCombats.Api.RoomServer.Services.Players
 		/// <para>пока не заспванится false</para>
 		/// </summary>
 		bool IsAlive { get; }
+		/// <summary>
+		/// позиция игрока в блоках
+		/// <para>это лучше использовать, для понимания точного блока под ногами игрока или его переноса на определенный блок</para>
+		/// </summary>
+		Index PositionIndex { get; set; }
+		/// <summary>
+		/// абсолютная позиция игрока в 3Д мире
+		/// </summary>
+		Vector3 Position { get; set; }
+		/// <summary>
+		/// вращение игрока
+		/// <para>используется только x и y составляющая</para>
+		/// </summary>
+		Vector3 Rotation { get; set; }
+
+		/// <summary>
+		/// задает одновременно и позицию и вращение игрока
+		/// <para>рекомендуется использовать этот метод в целях оптимизации, если нужно задать одновременно и позицию и вращение</para>
+		/// </summary>
+		/// <param name="position">позиция игрока</param>
+		/// <param name="rotation">вращение игрока (только x и y)</param>
+		void SetPositionAndRotation(Vector3 position, Vector3 rotation);
 
 		/// <summary>
 		/// контекст переменных игрока (см сервис <see cref="IPropertiesService"/>)

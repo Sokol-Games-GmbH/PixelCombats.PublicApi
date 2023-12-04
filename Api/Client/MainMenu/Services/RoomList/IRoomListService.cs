@@ -1,8 +1,8 @@
 ﻿using PixelCombats.Api.Basic;
+using PixelCombats.Api.RoomServer.Basic;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using PixelCombats.Api.RoomServer.Basic;
 
 namespace PixelCombats.Api.Client.MainMenu.Services.RoomList
 {
@@ -84,19 +84,27 @@ namespace PixelCombats.Api.Client.MainMenu.Services.RoomList
 		void ShowDetails(IRoomHandler room);
 
 		/// <summary>
+		/// возвращает комнату по е имени, или null
+		/// </summary>
+		/// <param name="roomName">имя комнаты</param>
+		Task<IRoomHandler> GetRoomByNameAsync(string roomName);
+
+		/// <summary>
 		/// начинает поиск комнат в соответствии с фильтром
 		/// </summary>
 		/// <param name="filter">фильтр комнат. Если null то выводит все комнаты</param>
+		/// <param name="includeFullRooms">включать ли полные комнаты</param>
 		/// <param name="onlyCompatibleVersions">если истина, то возвращает только совместимые с текущей версией версии комнат</param>
-		Task<GetRoomsResponce> MakeRequestAsync(IRoomsFilter filter = null, bool onlyCompatibleVersions = true);
+		Task<GetRoomsResponce> MakeRequestAsync(IRoomsFilter filter = null, bool onlyCompatibleVersions = true, bool includeFullRooms = false);
 
 		/// <summary>
 		/// начинает поиск комнат в соответствии с фильтром
 		/// </summary>
 		/// <param name="filter">фильтр комнат. Если null то выводит все комнаты</param>
 		/// <param name="onlyCompatibleVersions">если истина, то возвращает только совместимые с текущей версией версии комнат</param>
+		/// <param name="includeFullRooms">включать ли полные комнаты</param>
 		/// <param name="cancellationToken">токен отмены</param>
-		Task<GetRoomsResponce> MakeRequestAsync(IRoomsFilter filter, bool onlyCompatibleVersions, CancellationToken cancellationToken);
+		Task<GetRoomsResponce> MakeRequestAsync(IRoomsFilter filter, bool onlyCompatibleVersions, bool includeFullRooms, CancellationToken cancellationToken);
 
 		/// <summary>
 		/// если нужно вывести детали определенной комнаты
