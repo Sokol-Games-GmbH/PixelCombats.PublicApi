@@ -50,6 +50,11 @@ namespace PixelCombats.Api.RoomServer.Services.Inventory
 		/// восстанавливает боекомплект имеющегося оружия
 		/// </summary>
 		public void Restore();
+		/// <summary>
+		/// восстанавливает боекомплект в указанных слотах
+		/// </summary>
+		/// <param name="slots">массив слотов или столы через запятую (слоты нумеруются с 1)</param>
+		public void Restore(params byte[] slots);
 
 		/// <summary>
 		/// настройки инвентаря в данном контексте
