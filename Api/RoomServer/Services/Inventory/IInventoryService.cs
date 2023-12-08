@@ -47,6 +47,11 @@ namespace PixelCombats.Api.RoomServer.Services.Inventory
 		public IApiProp<bool, IInventoryContext> BuildInfinity { get; }
 
 		/// <summary>
+		/// восстанавливает боекомплект имеющегося оружия
+		/// </summary>
+		public void Restore();
+
+		/// <summary>
 		/// настройки инвентаря в данном контексте
 		/// </summary>
 		//IApiProp<InventorySettings, IInventoryContext> Settings { get; }
