@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using PixelCombats.Api.Basic.Structures.Math;
+﻿using PixelCombats.Api.Basic.Structures.Math;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Services.Build;
 using PixelCombats.Api.RoomServer.Services.Damage;
@@ -10,6 +9,8 @@ using PixelCombats.Api.RoomServer.Services.Properties;
 using PixelCombats.Api.RoomServer.Services.Spawn;
 using PixelCombats.Api.RoomServer.Services.Timers;
 using PixelCombats.Api.RoomServer.Services.Ui;
+using System.Collections.Generic;
+using PixelCombats.Api.RoomServer.Services.Popups;
 
 namespace PixelCombats.Api.RoomServer.Services.Teams
 {
@@ -17,7 +18,7 @@ namespace PixelCombats.Api.RoomServer.Services.Teams
 	/// API для работы с командой
 	/// <para>при получении использовании <see cref="IEnumerable"/> перечисление идет по копии текущего списка игроков, что дает возможность безопасной работы</para>
 	/// </summary>
-	public interface ITeamApi : IEnumerable<IPlayerApi>
+	public interface ITeamApi : IEnumerable<IPlayerApi>, IPopups
 	{
 		/// <summary>
 		/// ID команды

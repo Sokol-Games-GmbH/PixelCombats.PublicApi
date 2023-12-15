@@ -4,6 +4,7 @@ using PixelCombats.Api.RoomServer.Services.Build;
 using PixelCombats.Api.RoomServer.Services.Damage;
 using PixelCombats.Api.RoomServer.Services.DefaultPropertiesContexted;
 using PixelCombats.Api.RoomServer.Services.Inventory;
+using PixelCombats.Api.RoomServer.Services.Popups;
 using PixelCombats.Api.RoomServer.Services.Properties;
 using PixelCombats.Api.RoomServer.Services.Spawn;
 using PixelCombats.Api.RoomServer.Services.Teams;
@@ -15,7 +16,7 @@ namespace PixelCombats.Api.RoomServer.Services.Players
 	/// <summary>
 	/// API для работы с игроком
 	/// </summary>
-	public interface IPlayerApi
+	public interface IPlayerApi : IPopups
 	{
 		/// <summary>
 		/// ID игрока
@@ -59,14 +60,6 @@ namespace PixelCombats.Api.RoomServer.Services.Players
 		Vector3 Rotation { get; set; }
 
 		/// <summary>
-		/// задает одновременно и позицию и вращение игрока
-		/// <para>рекомендуется использовать этот метод в целях оптимизации, если нужно задать одновременно и позицию и вращение</para>
-		/// </summary>
-		/// <param name="position">позиция игрока</param>
-		/// <param name="rotation">вращение игрока (только x и y)</param>
-		void SetPositionAndRotation(Vector3 position, Vector3 rotation);
-
-		/// <summary>
 		/// контекст переменных игрока (см сервис <see cref="IPropertiesService"/>)
 		/// </summary>
 		IPlayerPropertiesContext Properties { get; }
@@ -98,6 +91,14 @@ namespace PixelCombats.Api.RoomServer.Services.Players
 		/// контекстные свойства
 		/// </summary>
 		IPlayerContextedPropertiesContext ContextedProperties { get; }
+
+		/// <summary>
+		/// задает одновременно и позицию и вращение игрока
+		/// <para>рекомендуется использовать этот метод в целях оптимизации, если нужно задать одновременно и позицию и вращение</para>
+		/// </summary>
+		/// <param name="position">позиция игрока</param>
+		/// <param name="rotation">вращение игрока (только x и y)</param>
+		void SetPositionAndRotation(Vector3 position, Vector3 rotation);
 
 		/// <summary>
 		/// сменился онлайн

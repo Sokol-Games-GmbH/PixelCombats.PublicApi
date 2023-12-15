@@ -3,6 +3,7 @@ using PixelCombats.Api.RoomServer.Services.Game;
 using PixelCombats.Api.RoomServer.Services.Inventory;
 using PixelCombats.Api.RoomServer.Services.LeaderBoard;
 using PixelCombats.Api.RoomServer.Services.Players;
+using PixelCombats.Api.RoomServer.Services.Popups;
 using PixelCombats.Api.RoomServer.Services.Properties;
 using PixelCombats.Api.RoomServer.Services.Spawn;
 using PixelCombats.Api.RoomServer.Services.Teams;
@@ -16,7 +17,7 @@ namespace PixelCombats.Api.RoomServer
 	/// API для работы с комнатой
 	/// </summary>
 	[ScriptingRoot("room")]
-	public interface IRoomApi
+	public interface IRoomApi : IPopups
 	{
 		IPropertiesService Properties { get; }
 		IPlayersService Players { get; }
