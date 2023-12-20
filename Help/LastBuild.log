@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2023.7.8.0" projectFile="C:\Docs\PixelCombats\PixelCombatsPublicAPI.shfbproj" started="21.12.2023 3:54:45">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2023.7.8.0" projectFile="C:\Docs\PixelCombats\PixelCombatsPublicAPI.shfbproj" started="21.12.2023 4:03:37">
 <buildStep step="Initializing">
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder&#39;
 Locating components in the following folder(s):
@@ -30,18 +30,18 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (ru-RU, Русский (Россия))...
-    Last step completed in 00:00:00,0010
+    Last step completed in 00:00:00,0000
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0075
+    Last step completed in 00:00:00,0120
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
-[C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-6c5e9728-b0f9-4724-9647-3ba558f99afc.proj]
-‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 21.12.2023 3:54:46.
+[C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-0fead4e8-cb1f-4710-afee-8353fd3c1179.proj]
+‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 21.12.2023 4:03:38.
 
-Џа&#174;ҐЄв &quot;C:\Docs\PixelCombats\Help\Working\GenerateRefInfo-6c5e9728-b0f9-4724-9647-3ba558f99afc.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+Џа&#174;ҐЄв &quot;C:\Docs\PixelCombats\Help\Working\GenerateRefInfo-0fead4e8-cb1f-4710-afee-8353fd3c1179.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
 PrepareForBuild:
   ‘&#174;&#167;&#164;&#160;&#173;ЁҐ Є&#160;в&#160;&#171;&#174;Ј&#160; &quot;obj\Debug\&quot;.
 GenerateRefInfo:
@@ -52,24 +52,24 @@ GenerateRefInfo:
   Wrote information on 46 namespaces, 154 types, and 618 members
   Merging duplicate type and member information
   Merged 0 duplicate type(s) and 0 duplicate member(s)
-‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Docs\PixelCombats\Help\Working\GenerateRefInfo-6c5e9728-b0f9-4724-9647-3ba558f99afc.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
-    Last step completed in 00:00:00,4411
+‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Docs\PixelCombats\Help\Working\GenerateRefInfo-0fead4e8-cb1f-4710-afee-8353fd3c1179.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+    Last step completed in 00:00:00,4569
 </buildStep>
 <buildStep step="ApplyDocumentModel">
 Applying document model to reflection output...
-    Last step completed in 00:00:00,0467
+    Last step completed in 00:00:00,0478
 </buildStep>
 <buildStep step="AddApiTopicFilenames">
 Adding topic filenames to API members...
-    Last step completed in 00:00:00,0757
+    Last step completed in 00:00:00,0782
 </buildStep>
 <buildStep step="GenerateApiTopicManifest">
 Generating API topic manifest...
-    Last step completed in 00:00:00,0769
+    Last step completed in 00:00:00,0741
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0120
+    Last step completed in 00:00:00,0139
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
@@ -83,22 +83,22 @@ Merging conceptual and additional tables of contents...
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file for API content...
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,0253
+    Last step completed in 00:00:00,0290
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
-    Last step completed in 00:00:00,0947
+    Last step completed in 00:00:00,0739
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0010
+    Last step completed in 00:00:00,0013
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Docs\PixelCombats\Help\Working\BuildAssembler.config
   Updating reference topic configurations.
   No conceptual content.  Removing conceptual content components.
-    Last step completed in 00:00:00,0123
+    Last step completed in 00:00:00,0130
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
@@ -1318,8 +1318,8 @@ Processed 1045 topic(s)
 CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 7 of 15.
 CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 4 of 30.
 ResolveReferenceLinksComponent: 40 entries added to the member ID URL cache.  New cache size: 52 entries
-SaveComponent: Waiting for the document writer task to finish (96 Markdown API file(s) remaining)...
-    Last step completed in 00:00:03,5041
+SaveComponent: Waiting for the document writer task to finish (92 Markdown API file(s) remaining)...
+    Last step completed in 00:00:03,3646
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -1329,7 +1329,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdo
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\media\AlertSecurity.png -&gt; C:\Docs\PixelCombats\Help\Working\Output\Markdown\media\AlertSecurity.png
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\media\AlertToDo.png -&gt; C:\Docs\PixelCombats\Help\Working\Output\Markdown\media\AlertToDo.png
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\MarkdownContent\_Footer.md -&gt; C:\Docs\PixelCombats\Help\Working\Output\Markdown\_Footer.md
-    Last step completed in 00:00:00,0170
+    Last step completed in 00:00:00,0046
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Executing informational Generate Help Project build step for plug-ins (not used for Markdown)
@@ -1344,15 +1344,15 @@ Copying content to output folder...
 Copied 500 files
 Copied 1000 files
 Finished copying 1053 files
-    Last step completed in 00:00:01,6196
+    Last step completed in 00:00:01,8927
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,0511
+    Last step completed in 00:00:00,0509
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 21.12.2023 3:54:52.  Total time: 00:00:06,3081
+Build completed successfully at 21.12.2023 4:03:44.  Total time: 00:00:06,4160
 
 </buildStep>
 </shfbBuild>

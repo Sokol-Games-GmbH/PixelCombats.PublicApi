@@ -9,21 +9,10 @@
 **Пространство имён:** <a href="ca209e86-4e5b-5c7e-c7f6-864f2399b768">PixelCombats.Api.Basic.MapSources</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public interface IMapSourcesService
-```
-**VB**
-``` VB
-Public Interface IMapSourcesService
-```
-**C++**
-``` C++
-public interface class IMapSourcesService
-```
-**F#**
-``` F#
-type IMapSourcesService = interface end
+**JavaScript**
+``` JavaScript
+PixelCombats.Api.Basic.MapSources.IMapSourcesService = function();
+PixelCombats.Api.Basic.MapSources.IMapSourcesService.createInterface('PixelCombats.Api.Basic.MapSources.IMapSourcesService');
 ```
 
 

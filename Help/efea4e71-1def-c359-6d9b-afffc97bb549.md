@@ -11,28 +11,9 @@
 **Пространство имён:** <a href="82964d0a-399a-e04d-3897-35a99730f8a0">PixelCombats.Api.RoomServer.Services.ValidateService</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-void ReportInvalid(
-	string message
-)
-```
-**VB**
-``` VB
-Sub ReportInvalid ( 
-	message As String
-)
-```
-**C++**
-``` C++
-void ReportInvalid(
-	String^ message
-)
-```
-**F#**
-``` F#
-abstract ReportInvalid : 
-        message : string -> unit 
+**JavaScript**
+``` JavaScript
+function ReportInvalid(message);
 ```
 
 

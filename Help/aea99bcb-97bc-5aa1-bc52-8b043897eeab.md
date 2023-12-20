@@ -11,22 +11,9 @@
 **Пространство имён:** <a href="4d3fbb36-c354-8f6e-a905-e9536bb5c956">PixelCombats.DTO.Room.GameMode</a>  
 **Сборка:** PixelCombats.DTO (в PixelCombats.DTO.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public string FileName
-```
-**VB**
-``` VB
-Public FileName As String
-```
-**C++**
-``` C++
-public:
-String^ FileName
-```
-**F#**
-``` F#
-val mutable FileName: string
+**JavaScript**
+``` JavaScript
+var FileName
 ```
 
 

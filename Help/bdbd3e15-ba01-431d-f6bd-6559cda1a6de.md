@@ -9,26 +9,12 @@
 **Пространство имён:** <a href="4d3fbb36-c354-8f6e-a905-e9536bb5c956">PixelCombats.DTO.Room.GameMode</a>  
 **Сборка:** PixelCombats.DTO (в PixelCombats.DTO.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-[SerializableAttribute]
-public sealed class GameModeParametersValues
-```
-**VB**
-``` VB
-<SerializableAttribute>
-Public NotInheritable Class GameModeParametersValues
-```
-**C++**
-``` C++
-[SerializableAttribute]
-public ref class GameModeParametersValues sealed
-```
-**F#**
-``` F#
-[<SealedAttribute>]
-[<SerializableAttribute>]
-type GameModeParametersValues = class end
+**JavaScript**
+``` JavaScript
+PixelCombats.DTO.Room.GameMode.GameModeParametersValues = function();
+
+Type.createClass(
+	'PixelCombats.DTO.Room.GameMode.GameModeParametersValues');
 ```
 
 <table><tr><td><strong>Inheritance</strong></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  →  GameModeParametersValues</td></tr>

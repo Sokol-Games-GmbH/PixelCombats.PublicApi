@@ -9,22 +9,9 @@
 **Пространство имён:** <a href="f9b35b8e-e88d-da29-b6b9-ee53cb5dcbfb">PixelCombats.Api.RoomServer.Services.RoomChat</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public string Text
-```
-**VB**
-``` VB
-Public Text As String
-```
-**C++**
-``` C++
-public:
-String^ Text
-```
-**F#**
-``` F#
-val mutable Text: string
+**JavaScript**
+``` JavaScript
+var Text
 ```
 
 

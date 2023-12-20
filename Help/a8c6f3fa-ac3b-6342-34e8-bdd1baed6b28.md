@@ -9,21 +9,10 @@
 **Пространство имён:** <a href="f9e9f261-263f-77ec-094c-46b0a7ac02ae">PixelCombats.Api.RoomServer.Interfaces</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public interface IPlayerContext
-```
-**VB**
-``` VB
-Public Interface IPlayerContext
-```
-**C++**
-``` C++
-public interface class IPlayerContext
-```
-**F#**
-``` F#
-type IPlayerContext = interface end
+**JavaScript**
+``` JavaScript
+PixelCombats.Api.RoomServer.Interfaces.IPlayerContext = function();
+PixelCombats.Api.RoomServer.Interfaces.IPlayerContext.createInterface('PixelCombats.Api.RoomServer.Interfaces.IPlayerContext');
 ```
 
 

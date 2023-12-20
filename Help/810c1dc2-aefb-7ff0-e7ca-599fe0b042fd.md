@@ -9,28 +9,10 @@
 **Пространство имён:** <a href="053da073-28ae-6a88-816e-7b3ca7400c53">PixelCombats.Api.RoomServer.Services.LeaderBoard</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public ITeamApi Team { get; set; }
-```
-**VB**
-``` VB
-Public Property Team As ITeamApi
-	Get
-	Set
-```
-**C++**
-``` C++
-public:
-virtual property ITeamApi^ Team {
-	ITeamApi^ get () sealed;
-	void set (ITeamApi^ value) sealed;
-}
-```
-**F#**
-``` F#
-abstract Team : ITeamApi with get, set
-override Team : ITeamApi with get, set
+**JavaScript**
+``` JavaScript
+function get_Team();
+function set_Team(value);
 ```
 
 

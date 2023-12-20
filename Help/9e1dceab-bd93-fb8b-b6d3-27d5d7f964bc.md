@@ -9,21 +9,10 @@
 **Пространство имён:** <a href="47d42150-1863-9bd0-b023-1ed80dc2abca">PixelCombats.Api.RoomServer.Services.Map</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public interface IMapService
-```
-**VB**
-``` VB
-Public Interface IMapService
-```
-**C++**
-``` C++
-public interface class IMapService
-```
-**F#**
-``` F#
-type IMapService = interface end
+**JavaScript**
+``` JavaScript
+PixelCombats.Api.RoomServer.Services.Map.IMapService = function();
+PixelCombats.Api.RoomServer.Services.Map.IMapService.createInterface('PixelCombats.Api.RoomServer.Services.Map.IMapService');
 ```
 
 

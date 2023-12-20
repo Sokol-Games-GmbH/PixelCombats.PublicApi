@@ -9,28 +9,9 @@
 **Пространство имён:** <a href="13601317-1cec-d8a4-23a8-2be7208954e2">PixelCombats.Api.RoomServer.Services.Build</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-bool Contains(
-	ushort id
-)
-```
-**VB**
-``` VB
-Function Contains ( 
-	id As UShort
-) As Boolean
-```
-**C++**
-``` C++
-bool Contains(
-	unsigned short id
-)
-```
-**F#**
-``` F#
-abstract Contains : 
-        id : uint16 -> bool 
+**JavaScript**
+``` JavaScript
+function Contains(id);
 ```
 
 

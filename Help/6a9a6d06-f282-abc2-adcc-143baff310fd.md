@@ -9,26 +9,10 @@
 **Пространство имён:** <a href="897e26c0-37f4-aaa8-14a4-585376190135">PixelCombats.Api.RoomServer.Services.BreackGraph</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-bool OnlyPlayerBlocksDmg { get; set; }
-```
-**VB**
-``` VB
-Property OnlyPlayerBlocksDmg As Boolean
-	Get
-	Set
-```
-**C++**
-``` C++
-property bool OnlyPlayerBlocksDmg {
-	bool get ();
-	void set (bool value);
-}
-```
-**F#**
-``` F#
-abstract OnlyPlayerBlocksDmg : bool with get, set
+**JavaScript**
+``` JavaScript
+function get_OnlyPlayerBlocksDmg();
+function set_OnlyPlayerBlocksDmg(value);
 ```
 
 

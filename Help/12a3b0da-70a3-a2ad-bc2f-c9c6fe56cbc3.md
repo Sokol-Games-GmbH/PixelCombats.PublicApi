@@ -9,28 +9,9 @@
 **Пространство имён:** <a href="4f427198-2b1e-a053-5a6c-40f068fcb995">PixelCombats.Api.RoomServer.Services.Areas.Triggers</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-bool Contains(
-	IPlayerApi player
-)
-```
-**VB**
-``` VB
-Function Contains ( 
-	player As IPlayerApi
-) As Boolean
-```
-**C++**
-``` C++
-bool Contains(
-	IPlayerApi^ player
-)
-```
-**F#**
-``` F#
-abstract Contains : 
-        player : IPlayerApi -> bool 
+**JavaScript**
+``` JavaScript
+function Contains(player);
 ```
 
 

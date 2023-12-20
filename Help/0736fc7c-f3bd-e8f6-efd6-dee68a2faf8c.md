@@ -9,24 +9,10 @@
 **Пространство имён:** <a href="ca209e86-4e5b-5c7e-c7f6-864f2399b768">PixelCombats.Api.Basic.MapSources</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-List<MapMeta> AllMapSources { get; }
-```
-**VB**
-``` VB
-ReadOnly Property AllMapSources As List(Of MapMeta)
-	Get
-```
-**C++**
-``` C++
-property List<MapMeta^>^ AllMapSources {
-	List<MapMeta^>^ get ();
-}
-```
-**F#**
-``` F#
-abstract AllMapSources : List<MapMeta> with get
+**JavaScript**
+``` JavaScript
+function get_AllMapSources();
+
 ```
 
 

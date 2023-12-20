@@ -9,28 +9,10 @@
 **Пространство имён:** <a href="371274c7-7cea-bcb1-e32d-9fb1e088bb07">PixelCombats.Api.RoomServer.Services.Timers</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public interface ITimersContext : IEnumerable<ITimerApi>, 
-	IEnumerable
-```
-**VB**
-``` VB
-Public Interface ITimersContext
-	Inherits IEnumerable(Of ITimerApi), IEnumerable
-```
-**C++**
-``` C++
-public interface class ITimersContext : IEnumerable<ITimerApi^>, 
-	IEnumerable
-```
-**F#**
-``` F#
-type ITimersContext = 
-    interface
-        interface IEnumerable<ITimerApi>
-        interface IEnumerable
-    end
+**JavaScript**
+``` JavaScript
+PixelCombats.Api.RoomServer.Services.Timers.ITimersContext = function();
+PixelCombats.Api.RoomServer.Services.Timers.ITimersContext.createInterface('PixelCombats.Api.RoomServer.Services.Timers.ITimersContext');
 ```
 
 <table><tr><td><strong>Implements</strong></td><td><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" target="_blank" rel="noopener noreferrer">IEnumerable</a>(<a href="04f31ee0-1099-1958-764e-858007901ce7">ITimerApi</a>), <a href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable" target="_blank" rel="noopener noreferrer">IEnumerable</a></td></tr>

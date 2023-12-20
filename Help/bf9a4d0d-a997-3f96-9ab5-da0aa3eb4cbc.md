@@ -9,32 +9,9 @@
 **Пространство имён:** <a href="80301dc4-c99f-1548-9039-ba946ad569bc">PixelCombats.Api.RoomServer.Services.PropertiesContexted</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-ITeamContextedProperty GetProperty(
-	string name,
-	ITeamApi team
-)
-```
-**VB**
-``` VB
-Function GetProperty ( 
-	name As String,
-	team As ITeamApi
-) As ITeamContextedProperty
-```
-**C++**
-``` C++
-ITeamContextedProperty^ GetProperty(
-	String^ name, 
-	ITeamApi^ team
-)
-```
-**F#**
-``` F#
-abstract GetProperty : 
-        name : string * 
-        team : ITeamApi -> ITeamContextedProperty 
+**JavaScript**
+``` JavaScript
+function GetProperty(name, team);
 ```
 
 

@@ -9,24 +9,10 @@
 **Пространство имён:** <a href="c9bc8f2a-0186-2d92-afcf-bc1871171a49">PixelCombats.Api.RoomServer</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-ILeaderBoardService LeaderBoard { get; }
-```
-**VB**
-``` VB
-ReadOnly Property LeaderBoard As ILeaderBoardService
-	Get
-```
-**C++**
-``` C++
-property ILeaderBoardService^ LeaderBoard {
-	ILeaderBoardService^ get ();
-}
-```
-**F#**
-``` F#
-abstract LeaderBoard : ILeaderBoardService with get
+**JavaScript**
+``` JavaScript
+function get_LeaderBoard();
+
 ```
 
 

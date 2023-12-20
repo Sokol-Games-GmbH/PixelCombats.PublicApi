@@ -9,40 +9,9 @@
 **Пространство имён:** <a href="ae7ef404-1be2-4da8-5f79-9ca48b77858c">PixelCombats.Api.Client.MainMenu.Services.RoomList</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-Task<GetRoomsResponce> MakeRequestAsync(
-	IRoomsFilter filter,
-	bool onlyCompatibleVersions,
-	bool includeFullRooms,
-	CancellationToken cancellationToken
-)
-```
-**VB**
-``` VB
-Function MakeRequestAsync ( 
-	filter As IRoomsFilter,
-	onlyCompatibleVersions As Boolean,
-	includeFullRooms As Boolean,
-	cancellationToken As CancellationToken
-) As Task(Of GetRoomsResponce)
-```
-**C++**
-``` C++
-Task<GetRoomsResponce>^ MakeRequestAsync(
-	IRoomsFilter^ filter, 
-	bool onlyCompatibleVersions, 
-	bool includeFullRooms, 
-	CancellationToken cancellationToken
-)
-```
-**F#**
-``` F#
-abstract MakeRequestAsync : 
-        filter : IRoomsFilter * 
-        onlyCompatibleVersions : bool * 
-        includeFullRooms : bool * 
-        cancellationToken : CancellationToken -> Task<GetRoomsResponce> 
+**JavaScript**
+``` JavaScript
+function MakeRequestAsync(filter, onlyCompatibleVersions, includeFullRooms, cancellationToken);
 ```
 
 

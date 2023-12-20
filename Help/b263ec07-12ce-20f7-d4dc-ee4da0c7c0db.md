@@ -9,21 +9,9 @@
 **Пространство имён:** <a href="4f427198-2b1e-a053-5a6c-40f068fcb995">PixelCombats.Api.RoomServer.Services.Areas.Triggers</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-IArea[] GetAreas()
-```
-**VB**
-``` VB
-Function GetAreas As IArea()
-```
-**C++**
-``` C++
-array<IArea^>^ GetAreas()
-```
-**F#**
-``` F#
-abstract GetAreas : unit -> IArea[] 
+**JavaScript**
+``` JavaScript
+function GetAreas();
 ```
 
 

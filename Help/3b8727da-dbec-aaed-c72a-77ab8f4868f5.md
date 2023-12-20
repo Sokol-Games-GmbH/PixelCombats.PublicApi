@@ -9,24 +9,10 @@
 **Пространство имён:** <a href="299769b5-0515-f682-c4bd-afa5af18175d">PixelCombats.Api.RoomServer.Basic</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-ILogService Log { get; }
-```
-**VB**
-``` VB
-ReadOnly Property Log As ILogService
-	Get
-```
-**C++**
-``` C++
-property ILogService^ Log {
-	ILogService^ get ();
-}
-```
-**F#**
-``` F#
-abstract Log : ILogService with get
+**JavaScript**
+``` JavaScript
+function get_Log();
+
 ```
 
 

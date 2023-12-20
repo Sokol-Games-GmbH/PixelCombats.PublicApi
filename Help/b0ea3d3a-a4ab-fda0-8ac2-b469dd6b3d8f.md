@@ -9,21 +9,10 @@
 **Пространство имён:** <a href="4f427198-2b1e-a053-5a6c-40f068fcb995">PixelCombats.Api.RoomServer.Services.Areas.Triggers</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public interface IAreaTrigger
-```
-**VB**
-``` VB
-Public Interface IAreaTrigger
-```
-**C++**
-``` C++
-public interface class IAreaTrigger
-```
-**F#**
-``` F#
-type IAreaTrigger = interface end
+**JavaScript**
+``` JavaScript
+PixelCombats.Api.RoomServer.Services.Areas.Triggers.IAreaTrigger = function();
+PixelCombats.Api.RoomServer.Services.Areas.Triggers.IAreaTrigger.createInterface('PixelCombats.Api.RoomServer.Services.Areas.Triggers.IAreaTrigger');
 ```
 
 

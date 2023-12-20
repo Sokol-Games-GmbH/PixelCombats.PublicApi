@@ -9,29 +9,9 @@
 **Пространство имён:** <a href="4724844a-40e0-6ce2-5e17-e5b084923b9c">PixelCombats.Annotation</a>  
 **Сборка:** PixelCombats.Annotation (в PixelCombats.Annotation.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public SerializeMemberAttribute(
-	int key
-)
-```
-**VB**
-``` VB
-Public Sub New ( 
-	key As Integer
-)
-```
-**C++**
-``` C++
-public:
-SerializeMemberAttribute(
-	int key
-)
-```
-**F#**
-``` F#
-new : 
-        key : int -> SerializeMemberAttribute
+**JavaScript**
+``` JavaScript
+PixelCombats.Annotation.SerializeMemberAttribute = function(key);
 ```
 
 

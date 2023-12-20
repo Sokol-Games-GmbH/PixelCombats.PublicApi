@@ -9,23 +9,9 @@
 **Пространство имён:** <a href="299769b5-0515-f682-c4bd-afa5af18175d">PixelCombats.Api.RoomServer.Basic</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-public interface IReadOnlyApiProp<TValue, TContext>
-
-```
-**VB**
-``` VB
-Public Interface IReadOnlyApiProp(Of TValue, TContext)
-```
-**C++**
-``` C++
-generic<typename TValue, typename TContext>
-public interface class IReadOnlyApiProp
-```
-**F#**
-``` F#
-type IReadOnlyApiProp<'TValue, 'TContext> = interface end
+**JavaScript**
+``` JavaScript
+JavaScript не поддерживает универсальные типы и методы.
 ```
 
 

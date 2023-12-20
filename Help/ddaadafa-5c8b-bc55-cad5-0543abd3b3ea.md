@@ -9,40 +9,9 @@
 **Пространство имён:** <a href="0971793b-47eb-58b2-d7a8-6c570042d7d9">PixelCombats.Api.RoomServer.Services.Spawn</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-float GetSpawnRotation(
-	float x,
-	float z,
-	float lookX,
-	float lookZ
-)
-```
-**VB**
-``` VB
-Function GetSpawnRotation ( 
-	x As Single,
-	z As Single,
-	lookX As Single,
-	lookZ As Single
-) As Single
-```
-**C++**
-``` C++
-float GetSpawnRotation(
-	float x, 
-	float z, 
-	float lookX, 
-	float lookZ
-)
-```
-**F#**
-``` F#
-abstract GetSpawnRotation : 
-        x : float32 * 
-        z : float32 * 
-        lookX : float32 * 
-        lookZ : float32 -> float32 
+**JavaScript**
+``` JavaScript
+function GetSpawnRotation(x, z, lookX, lookZ);
 ```
 
 

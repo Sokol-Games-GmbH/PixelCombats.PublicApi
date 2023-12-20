@@ -9,24 +9,10 @@
 **Пространство имён:** <a href="7a6d0ac1-2a42-0f0a-dc90-e72ae4f99370">PixelCombats.Api.RoomServer.Services.Properties</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-ApiEvent<IReadOnlyProperty> OnValue { get; }
-```
-**VB**
-``` VB
-ReadOnly Property OnValue As ApiEvent(Of IReadOnlyProperty)
-	Get
-```
-**C++**
-``` C++
-property ApiEvent<IReadOnlyProperty^>^ OnValue {
-	ApiEvent<IReadOnlyProperty^>^ get ();
-}
-```
-**F#**
-``` F#
-abstract OnValue : ApiEvent<IReadOnlyProperty> with get
+**JavaScript**
+``` JavaScript
+function get_OnValue();
+
 ```
 
 

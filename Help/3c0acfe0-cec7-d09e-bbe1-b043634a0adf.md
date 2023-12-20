@@ -9,24 +9,10 @@
 **Пространство имён:** <a href="708e122f-41de-30e3-c143-1ccf02ad493a">PixelCombats.Api.RoomServer.Services.Players</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-ApiEvent<IPlayerApi> OnTeam { get; }
-```
-**VB**
-``` VB
-ReadOnly Property OnTeam As ApiEvent(Of IPlayerApi)
-	Get
-```
-**C++**
-``` C++
-property ApiEvent<IPlayerApi^>^ OnTeam {
-	ApiEvent<IPlayerApi^>^ get ();
-}
-```
-**F#**
-``` F#
-abstract OnTeam : ApiEvent<IPlayerApi> with get
+**JavaScript**
+``` JavaScript
+function get_OnTeam();
+
 ```
 
 

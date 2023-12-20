@@ -9,21 +9,9 @@
 **Пространство имён:** <a href="0971793b-47eb-58b2-d7a8-6c570042d7d9">PixelCombats.Api.RoomServer.Services.Spawn</a>  
 **Сборка:** PixelCombats.PublicAPI (в PixelCombats.PublicAPI.dll) Версия: 1.0.0.0 (1.0.0.0)
 
-**C#**
-``` C#
-void Clear()
-```
-**VB**
-``` VB
-Sub Clear
-```
-**C++**
-``` C++
-void Clear()
-```
-**F#**
-``` F#
-abstract Clear : unit -> unit 
+**JavaScript**
+``` JavaScript
+function Clear();
 ```
 
 
