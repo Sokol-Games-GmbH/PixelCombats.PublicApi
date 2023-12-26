@@ -39,6 +39,25 @@ namespace PixelCombats.Api.RoomServer.Services.DefaultPropertiesContexted
 	}
 
 	/// <summary>
+	/// скорость строительства
+	/// </summary>
+	public enum BuildSpeedTypes
+	{
+		/// <summary>
+		/// скорость строительства по умолчанию
+		/// </summary>
+		Default = 1,
+		/// <summary>
+		/// скорость строительства х2
+		/// </summary>
+		X2 = 2,
+		/// <summary>
+		/// скорость строительства х3
+		/// </summary>
+		X3 = 3
+	}
+
+	/// <summary>
 	/// контекст стандартных контекстных свойств
 	/// </summary>
 	public interface IContextedPropertiesContext
@@ -55,6 +74,15 @@ namespace PixelCombats.Api.RoomServer.Services.DefaultPropertiesContexted
 		/// максимальный запас HP
 		/// </summary>
 		IApiProp<float, IContextedPropertiesContext> MaxHp { get; }
+		/// <summary>
+		/// скорость строительства блоками
+		/// </summary>
+		IApiProp<BuildSpeedTypes, IContextedPropertiesContext> BuildSpeed { get; }
+		/// <summary>
+		/// количество строительных блоков на старте (после спавна или пополнения боекомплекта)
+		/// <para>если заданы бесконечные блоки то не учитывается</para>
+		/// </summary>
+		IApiProp<int, IContextedPropertiesContext> StartBlocksCount { get; }
 	}
 
 	/// <summary>
