@@ -30,6 +30,15 @@ namespace PixelCombats.Api.RoomServer.Services.Ui
 		/// свойство правое вверху
 		/// </summary>
 		IApiProp<TeamPropertyBinding, IUIContext> TeamProp2 { get; }
+		/// <summary>
+		/// Отображение сообщений в углу экрана
+		/// </summary>
+		IApiProp<bool, IUiContext> EventsLineEnable { get; }
+		/// <summary>
+		/// Отвечает за отображение Ui интерфейса у игрока
+		/// Нужно например для скриншота карты
+		/// </summary>
+		IApiProp<bool, IUiContext> ViewEnable { get; }
 	}
 
 	/// <summary>
