@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+using PixelCombats.Api.Basic;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 
@@ -30,6 +30,11 @@ namespace PixelCombats.Api.RoomServer.Services.Ui
 		/// свойство правое вверху
 		/// </summary>
 		IApiProp<TeamPropertyBinding, IUIContext> TeamProp2 { get; }
+		/// <summary>
+		/// Задает список UI элементов для отображения
+		/// </summary>
+		/// <param name="Ids">ID элементов которые будут отображатся</param>
+		void SetUiForView(byte[] Ids)
 	}
 
 	/// <summary>
