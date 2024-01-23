@@ -1,10 +1,12 @@
-﻿namespace PixelCombats.Api.Basic
+﻿using JavaScriptEngine.DataAnnotations;
+
+namespace PixelCombats.Api.Basic
 {
 	/// <summary>
 	///   <para>Выводит логи на консоль</para>
 	///   <para>Восновном используется для дебага скриптов</para>
 	/// </summary>
-	[ScriptingRoot("log")]
+	[ScriptObject("log", ScriptModuleNames.LOG)]
 	public interface ILogService
 	{
 		/// <summary>Выволит лог в консоль</summary>

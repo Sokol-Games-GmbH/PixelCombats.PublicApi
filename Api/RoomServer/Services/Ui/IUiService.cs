@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 
@@ -50,7 +50,7 @@ namespace PixelCombats.Api.RoomServer.Services.Ui
 	/// <summary>
 	/// сервис пользовательского интерфейса
 	/// </summary>
-	[ScriptingRoot("Ui")]
+	[ScriptObject("Ui", ScriptModuleNames.ROOM_API)]
 	public interface IUiService :
 		IContextedService<IRoomUIContext, ITeamUIContext, IPlayerUIContext>
 	{ }

@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.Basic.Structures.Math;
 using PixelCombats.Api.RoomServer.Services.Areas;
 
@@ -7,7 +7,7 @@ namespace PixelCombats.Api.RoomServer.Services.MapEditor
 	/// <summary>
 	/// редактор карт
 	/// </summary>
-	[ScriptingRoot("MapEditor")]
+	[ScriptObject("MapEditor", ScriptModuleNames.ROOM_API)]
 	public interface IMapEditorService
 	{
 		/// <summary>
@@ -60,6 +60,6 @@ namespace PixelCombats.Api.RoomServer.Services.MapEditor
 		/// </summary>
 		/// <param name="index">индекс точки пространства</param>
 		/// <returns>ID блока или 0, если в точке пусто</returns>
-		ushort GetBlockId(Index index); 
+		ushort GetBlockId(Index index);
 	}
 }

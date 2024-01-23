@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 
@@ -136,7 +136,7 @@ namespace PixelCombats.Api.RoomServer.Services.Inventory
 	/// все настройки переопределяются в следующем порядке комната->команда->игрок.
 	/// тоесть если в комнате оружие не разрешено а в команде разрешено, то вче члены команды получают это оружие,
 	/// при условии, что у конкретных игроков нет настройки, что оружие запрещено
-	[ScriptingRoot("Inventory")]
+	[ScriptObject("Inventory", ScriptModuleNames.ROOM_API)]
 	public interface IInventoryService :
 		IContextedService<IRoomInventoryContext, ITeamInventoryContext, IPlayerInventoryContext>
 	{

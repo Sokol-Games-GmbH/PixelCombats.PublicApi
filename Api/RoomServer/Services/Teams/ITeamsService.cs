@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.Basic.Structures.Math;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Services.Players;
+using System.Collections.Generic;
 
 namespace PixelCombats.Api.RoomServer.Services.Teams
 {
 	/// <summary>
 	/// Сервис работы с командами
 	/// </summary>
-	[ScriptingRoot("Teams")]
+	[ScriptObject("Teams", ScriptModuleNames.ROOM_API)]
 	public interface ITeamsService : IEnumerable<ITeamApi>
 	{
 		/// <summary>

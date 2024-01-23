@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.DTO.Room.Map;
 
@@ -7,14 +7,14 @@ namespace PixelCombats.Api.RoomServer.Services.Map
 	/// <summary>
 	/// сервис работы с картой
 	/// </summary>
-	[ScriptingRoot("Map")]
+	[ScriptObject("Map", ScriptModuleNames.ROOM_API)]
 	public interface IMapService
 	{
-        /// <summary>
-        /// возвращает метаданные текущей карты.
-        /// при смене меты происходит перезагрузка комнаты
-        /// </summary>
-        MapMeta MapMeta { get; }
+		/// <summary>
+		/// возвращает метаданные текущей карты.
+		/// при смене меты происходит перезагрузка комнаты
+		/// </summary>
+		MapMeta MapMeta { get; }
 		/// <summary>
 		/// нужно ли менять карту, когда начинается новая игра
 		/// <para>карта может быть изменена только на случайную, из списка стандартных карт</para>
@@ -29,5 +29,5 @@ namespace PixelCombats.Api.RoomServer.Services.Map
 		/// происходит, если загрузилась карта
 		/// </summary>
 		ApiEvent<IMapService> OnLoad { get; }
-    }
+	}
 }

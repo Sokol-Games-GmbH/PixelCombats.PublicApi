@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 
 namespace PixelCombats.Api.RoomServer.Services.ValidateService
@@ -6,7 +6,7 @@ namespace PixelCombats.Api.RoomServer.Services.ValidateService
 	/// <summary>
 	/// сервис валидности режима
 	/// </summary>
-	[ScriptingRoot("Validate")]
+	[ScriptObject("Validate", ScriptModuleNames.ROOM_API)]
 	public interface IValidateService
 	{
 		/// <summary>

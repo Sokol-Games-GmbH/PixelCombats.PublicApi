@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Services.Players;
 using System.Collections.Generic;
@@ -78,7 +78,7 @@ namespace PixelCombats.Api.RoomServer.Services.Areas.Triggers
 	/// <summary>
 	/// сервис триггеров зон
 	/// </summary>
-	[ScriptingRoot("AreaPlayerTriggerService")]
+	[ScriptObject("AreaPlayerTriggerService", ScriptModuleNames.ROOM_API)]
 	public interface IAreaPlayerTriggerService : IEnumerable<IPlayerTrigger>
 	{
 		/// <summary>

@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.Basic.Structures.Math;
 using PixelCombats.Api.RoomServer.Basic;
+using System.Collections.Generic;
 
 namespace PixelCombats.Api.RoomServer.Services.Areas
 {
@@ -48,8 +48,8 @@ namespace PixelCombats.Api.RoomServer.Services.Areas
 	/// сервис зон на карте
 	/// <para>если работать как с перечислителем то выдаст все дескрипторы всех зон, и пустых и нет</para>
 	/// </summary>
-	[ScriptingRoot("AreaService")]
-	public interface IAreaService: IEnumerable<IArea>
+	[ScriptObject("AreaService", ScriptModuleNames.ROOM_API)]
+	public interface IAreaService : IEnumerable<IArea>
 	{
 		/// <summary>
 		/// возвращает зону по ее уникальному имени

@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
+using System.Collections.Generic;
 
 namespace PixelCombats.Api.RoomServer.Services.Timers
 {
@@ -36,7 +36,7 @@ namespace PixelCombats.Api.RoomServer.Services.Timers
 	/// <summary>
 	/// сервис таймеров в комнате
 	/// </summary>
-	[ScriptingRoot("Timers")]
+	[ScriptObject("Timers", ScriptModuleNames.ROOM_API)]
 	public interface ITimersService :
 		IContextedService<IRoomTimersContext, ITeamTimersContext, IPlayerTimersContext>
 	{

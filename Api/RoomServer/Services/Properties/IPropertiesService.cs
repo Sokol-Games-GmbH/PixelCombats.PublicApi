@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
+using System;
+using System.Collections.Generic;
 
 namespace PixelCombats.Api.RoomServer.Services.Properties
 {
@@ -204,7 +204,7 @@ namespace PixelCombats.Api.RoomServer.Services.Properties
 	/// <summary>
 	/// сервис свойств в комнате
 	/// </summary>
-	[ScriptingRoot("Properties")]
+	[ScriptObject("Properties", ScriptModuleNames.ROOM_API)]
 	public interface IPropertiesService :
 		IContextedService<IRoomPropertiesContext, ITeamPropertiesContext, IPlayerPropertiesContext>
 	{

@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using System.Collections.Generic;
 using System.Threading;
@@ -74,7 +74,7 @@ namespace PixelCombats.Api.Client.MainMenu.Services.RoomList
 	/// <summary>
 	/// сервис списка комнат
 	/// </summary>
-	[ScriptingRoot("Rooms")]
+	[ScriptObject("Rooms", ScriptModuleNames.MAIN_MENU)]
 	public interface IRoomListService
 	{
 		/// <summary>

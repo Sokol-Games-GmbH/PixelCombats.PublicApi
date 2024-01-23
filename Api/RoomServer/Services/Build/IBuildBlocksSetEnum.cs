@@ -1,11 +1,11 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 
 namespace PixelCombats.Api.RoomServer.Services.Build
 {
 	/// <summary>
 	/// набор всех пресетов наборов блоков
 	/// </summary>
-	[ScriptingRoot("BuildBlocksSet")]
+	[ScriptObject("BuildBlocksSet", ScriptModuleNames.ROOM_API)]
 	public interface IBuildBlocksSetEnum
 	{
 		/// <summary>

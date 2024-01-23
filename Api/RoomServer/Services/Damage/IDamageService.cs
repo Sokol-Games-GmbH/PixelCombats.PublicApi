@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 using PixelCombats.Api.RoomServer.Services.Players;
@@ -52,7 +52,7 @@ namespace PixelCombats.Api.RoomServer.Services.Damage
 	/// <summary>
 	/// сервис урона игрокам
 	/// </summary>
-	[ScriptingRoot("Damage")]
+	[ScriptObject("Damage", ScriptModuleNames.ROOM_API)]
 	public interface IDamageService :
 		IContextedService<IRoomDamageContext, ITeamDamageContext, IPlayerDamageContext>
 	{

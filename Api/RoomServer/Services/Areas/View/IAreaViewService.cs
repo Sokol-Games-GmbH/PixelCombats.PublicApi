@@ -1,9 +1,9 @@
-﻿using PixelCombats.Api.Basic.Structures.Math;
+﻿using JavaScriptEngine.DataAnnotations;
+using PixelCombats.Api.Basic.Structures.Math;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 using System;
 using System.Collections.Generic;
-using PixelCombats.Api.Basic;
 
 namespace PixelCombats.Api.RoomServer.Services.Areas.View
 {
@@ -87,7 +87,7 @@ namespace PixelCombats.Api.RoomServer.Services.Areas.View
 	/// <summary>
 	/// сервис визуализации зон
 	/// </summary>
-	[ScriptingRoot("AreaViewService")]
+	[ScriptObject("AreaViewService", ScriptModuleNames.ROOM_API)]
 	public interface IAreaViewService :
 		IContextedService<IRoomAreaViewContext, ITeamAreaViewContext, IPlayerAreaViewContext>
 	{ }

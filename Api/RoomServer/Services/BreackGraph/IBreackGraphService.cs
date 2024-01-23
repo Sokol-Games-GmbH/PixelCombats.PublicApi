@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 
 namespace PixelCombats.Api.RoomServer.Services.BreackGraph
@@ -7,7 +7,7 @@ namespace PixelCombats.Api.RoomServer.Services.BreackGraph
 	/// граф поломок вокселей
 	/// <para>используется для определения модели повреждений блоков</para>
 	/// </summary>
-	[ScriptingRoot("BreackGraph")]
+	[ScriptObject("BreackGraph", ScriptModuleNames.ROOM_API)]
 	public interface IBreackGraphService
 	{
 		/// <summary>

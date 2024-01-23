@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 
@@ -98,7 +98,7 @@ namespace PixelCombats.Api.RoomServer.Services.DefaultPropertiesContexted
 	/// </summary>
 	public interface IPlayerContextedPropertiesContext : IContextedPropertiesContext, IPlayerContext { }
 
-	[ScriptingRoot("contextedProperties")]
+	[ScriptObject("contextedProperties", ScriptModuleNames.ROOM_API)]
 	public interface IContextedPropertiesService :
 		IContextedService<IRoomContextedPropertiesContext, ITeamContextedPropertiesContext, IPlayerContextedPropertiesContext>
 	{ }

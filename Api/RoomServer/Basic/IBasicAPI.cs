@@ -1,4 +1,5 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
+using PixelCombats.Api.Basic;
 using PixelCombats.Api.Client;
 
 namespace PixelCombats.Api.RoomServer.Basic
@@ -9,7 +10,7 @@ namespace PixelCombats.Api.RoomServer.Basic
 	///   <para>Доступно всегда
 	/// </para>
 	/// </summary>
-	[ScriptingRoot("basic")]
+	[ScriptObject("basic", ScriptModuleNames.BASIC)]
 	public interface IBasicAPI
 	{
 		/// <summary>Выводит логи на консоль</summary>

@@ -1,16 +1,16 @@
-﻿using System.Collections.Generic;
-using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Services.LeaderBoard;
 using PixelCombats.Api.RoomServer.Services.Players;
 using PixelCombats.Api.RoomServer.Services.Teams;
+using System.Collections.Generic;
 
 namespace PixelCombats.Api.RoomServer.Services.Game
 {
 	/// <summary>
 	/// сервис конца матча
 	/// </summary>
-	[ScriptingRoot("Game")]
+	[ScriptObject("Game", ScriptModuleNames.ROOM_API)]
 	public interface IGameService
 	{
 		/// <summary>

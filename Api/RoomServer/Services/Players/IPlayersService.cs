@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
+using System.Collections.Generic;
 
 namespace PixelCombats.Api.RoomServer.Services.Players
 {
 	/// <summary>
 	/// сервис для работы с игроками
 	/// </summary>
-	[ScriptingRoot("Players")]
+	[ScriptObject("Players", ScriptModuleNames.ROOM_API)]
 	public interface IPlayersService : IEnumerable<IPlayerApi>
 	{
 		/// <summary>

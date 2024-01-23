@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 
 namespace PixelCombats.Api.Client
 {
@@ -6,7 +6,7 @@ namespace PixelCombats.Api.Client
 	///  Выводит сообщения игроку
 	///  <para>Используется, если нужно вывести сообщение игроку</para>
 	/// </summary>
-	[ScriptingRoot("msg")]
+	[ScriptObject("msg", ScriptModuleNames.ROOM_API)]
 	public interface IMessageService
 	{
 		/// <summary>

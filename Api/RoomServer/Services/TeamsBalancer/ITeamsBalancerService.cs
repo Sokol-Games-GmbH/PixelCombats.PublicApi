@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 
 namespace PixelCombats.Api.RoomServer.Services.TeamsBalancer
@@ -6,7 +6,7 @@ namespace PixelCombats.Api.RoomServer.Services.TeamsBalancer
 	/// <summary>
 	/// Определяет баланс команд в игре
 	/// </summary>
-	[ScriptingRoot("TeamsBalancer")]
+	[ScriptObject("TeamsBalancer", ScriptModuleNames.ROOM_API)]
 	public interface ITeamsBalancerService
 	{
 		/// <summary>

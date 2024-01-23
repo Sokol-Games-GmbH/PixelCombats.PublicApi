@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Services.Players;
 using PixelCombats.Api.RoomServer.Services.Teams;
+using System.Collections.Generic;
 
 namespace PixelCombats.Api.RoomServer.Services.LeaderBoard
 {
 	/// <summary>
 	/// лидерборд - определяет списки лидирующих игроков и команд
 	/// </summary>
-	[ScriptingRoot("LeaderBoard")]
+	[ScriptObject("LeaderBoard", ScriptModuleNames.ROOM_API)]
 	public interface ILeaderBoardService : IComparer<IPlayerApi>
 	{
 		/// <summary>

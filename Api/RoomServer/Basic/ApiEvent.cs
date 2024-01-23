@@ -1,7 +1,9 @@
-﻿using System;
+﻿using JavaScriptEngine.DataAnnotations;
+using System;
 
 namespace PixelCombats.Api.RoomServer.Basic
 {
+	[ScriptAllowed]
 	public sealed class ApiEvent
 	{
 		public event Action Event;
@@ -19,6 +21,7 @@ namespace PixelCombats.Api.RoomServer.Basic
 			Event?.Invoke();
 		}
 	}
+	[ScriptAllowed]
 	public sealed class ApiEvent<T>
 	{
 		public event Action<T> Event;
@@ -38,6 +41,7 @@ namespace PixelCombats.Api.RoomServer.Basic
 			EventObj?.Invoke(param);
 		}
 	}
+	[ScriptAllowed]
 	public sealed class ApiEvent<T1, T2>
 	{
 		public event Action<T1, T2> Event;
@@ -57,6 +61,7 @@ namespace PixelCombats.Api.RoomServer.Basic
 			EventObj?.Invoke(param1, param2);
 		}
 	}
+	[ScriptAllowed]
 	public sealed class ApiEvent<T1, T2, T3>
 	{
 		public event Action<T1, T2, T3> Event;
@@ -64,7 +69,7 @@ namespace PixelCombats.Api.RoomServer.Basic
 
 		public void Add(Action<object, object, object> action)
 		{
-			EventObj +=  action;
+			EventObj += action;
 		}
 		public void Remove(Action<object, object, object> action)
 		{

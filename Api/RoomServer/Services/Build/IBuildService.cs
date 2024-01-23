@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 
@@ -122,6 +122,6 @@ namespace PixelCombats.Api.RoomServer.Services.Build
 	/// сервис строительства
 	/// <para>включает в себя функционал изменения геометрии карт</para>
 	/// </summary>
-	[ScriptingRoot("Build")]
+	[ScriptObject("Build", ScriptModuleNames.ROOM_API)]
 	public interface IBuildService : IContextedService<IRoomBuildContext, ITeamBuildContext, IPlayerBuildContext> { }
 }

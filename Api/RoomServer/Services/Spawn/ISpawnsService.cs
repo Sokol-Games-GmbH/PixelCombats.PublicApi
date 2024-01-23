@@ -1,5 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 using PixelCombats.Api.RoomServer.Services.Players;
@@ -144,7 +143,7 @@ namespace PixelCombats.Api.RoomServer.Services.Spawn
 	/// <summary>
 	/// сервис спавнов
 	/// </summary>
-	[ScriptingRoot("Spawns")]
+	[ScriptObject("Spawns", ScriptModuleNames.ROOM_API)]
 	public interface ISpawnsService :
 		IContextedService<IRoomSpawnContext, ITeamSpawnContext, IPlayerSpawnContext>
 	{

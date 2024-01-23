@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 
 namespace PixelCombats.Api.Client.MainMenu.Services.RoomConstructor
@@ -6,7 +6,7 @@ namespace PixelCombats.Api.Client.MainMenu.Services.RoomConstructor
 	/// <summary>
 	/// конструктор комнат
 	/// </summary>
-	[ScriptingRoot("RoomConstructor")]
+	[ScriptObject("RoomConstructor", ScriptModuleNames.MAIN_MENU)]
 	public interface IRoomConstructor
 	{
 		/// <summary>
@@ -19,5 +19,5 @@ namespace PixelCombats.Api.Client.MainMenu.Services.RoomConstructor
 		/// 
 		/// </summary>
 		ApiEvent<RoomCreationParameters, IRoomConstructor> OnRoomCreated { get; }
-    }
+	}
 }

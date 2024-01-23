@@ -1,4 +1,4 @@
-﻿using PixelCombats.Api.Basic;
+﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Services.Game;
 using PixelCombats.Api.RoomServer.Services.Inventory;
 using PixelCombats.Api.RoomServer.Services.LeaderBoard;
@@ -16,8 +16,8 @@ namespace PixelCombats.Api.RoomServer
 	/// <summary>
 	/// API для работы с комнатой
 	/// </summary>
-	[ScriptingRoot("room")]
-	public interface IRoomApi : IPopups
+	[ScriptObject("room", ScriptModuleNames.ROOM_API)]
+	public interface IRoomApi : IPopups // todo упразднить попуп перенести в отдельный объект
 	{
 		IPropertiesService Properties { get; }
 		IPlayersService Players { get; }
