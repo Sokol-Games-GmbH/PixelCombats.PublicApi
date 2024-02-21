@@ -9,7 +9,9 @@
 На данный момент 90% кода такойже, однако, будут и изменения, такчто имеющиеся режимы, если мы не сделаем обратную совместимость, придется переделать на новый АПИ.
 Изучить пример режима на АПИ 2.0 можно тут:
 
-[Режим редактора на АПИ 2.0](https://vk.com/away.php?to=https%3A%2F%2Fgithub.com%2Fkkohno%2FPixelCombats.GameModes.Editor%2Ftree%2FAPI-2.0&cc_key=)
+- [Режим редактора на АПИ 2.0](https://vk.com/away.php?to=https%3A%2F%2Fgithub.com%2Fkkohno%2FPixelCombats.GameModes.Editor%2Ftree%2FAPI-2.0&cc_key=)
+- [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM/tree/API-2.0)
+- [МИР](https://github.com/kkohno/PixelCombats.GameModes.Peace/tree/API-2.0)
 # Добро Пожаловать!
 Данный репозиторий предназначен для продвинутых тестировщиков и разработчиков режимов игры [PixelCombats](https://play.google.com/store/apps/details?id=com.pixel.gun.combats). Здесь разработчиками выкладывается [последний API режимов](https://github.com/Sokol-Games-GmbH/PixelCombats.PublicApi/tree/main/Api) и [документация](docs/doc.md), любой может проинформировать о проблемах и багах, предложить улучшения по игре.
 ## Как создавать игровые режимы
