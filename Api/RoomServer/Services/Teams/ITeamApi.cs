@@ -82,6 +82,11 @@ namespace PixelCombats.Api.RoomServer.Services.Teams
 		/// </summary>
 		int Count { get; }
 		/// <summary>
+		/// все игроки в команде
+		/// <para>не рекомендуется вызывать каждый раз в цикле</para>
+		/// </summary>
+		IPlayerApi[] Players { get; }
+		/// <summary>
 		/// возвращает истину, если игрок есть в команде
 		/// </summary>
 		/// <param name="player">игрок</param>

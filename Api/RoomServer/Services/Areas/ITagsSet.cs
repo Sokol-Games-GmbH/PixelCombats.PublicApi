@@ -12,6 +12,11 @@ namespace PixelCombats.Api.RoomServer.Services.Areas
 		/// </summary>
 		int Count { get; }
 		/// <summary>
+		/// возвращает все тэги
+		/// <para>Не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		string[] All { get; }
+		/// <summary>
 		/// добавляет тэг
 		/// </summary>
 		/// <param name="tag">тэг</param>

@@ -9,6 +9,11 @@ namespace PixelCombats.Api.RoomServer.Services.Spawn
 	public interface ISpawnPointsData : IEnumerable<ISpawnPointsGroup>
 	{
 		/// <summary>
+		/// возвращает все группы спавнпоинтов
+		/// <para>Не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		ISpawnPointsGroup[] All { get; }
+		/// <summary>
 		/// все группы спавнпоинтов комнаты, в которых есть хоть один спавнпоинт
 		/// </summary>
 		IEnumerator<ISpawnPointsGroup> GetAllSpawnPointsGroups();

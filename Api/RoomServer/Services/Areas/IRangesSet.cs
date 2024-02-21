@@ -18,6 +18,11 @@ namespace PixelCombats.Api.RoomServer.Services.Areas
 		/// </summary>
 		int Count { get; }
 		/// <summary>
+		/// возвраает все области
+		/// <para>Не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		IndexRange[] All { get; }
+		/// <summary>
 		/// удаляет все области
 		/// </summary>
 		void Clear();

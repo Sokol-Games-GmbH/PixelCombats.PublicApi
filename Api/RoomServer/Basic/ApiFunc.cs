@@ -1,4 +1,5 @@
 ﻿using System;
+using JavaScriptEngine.DataAnnotations;
 
 namespace PixelCombats.Api.RoomServer.Basic
 {
@@ -7,6 +8,7 @@ namespace PixelCombats.Api.RoomServer.Basic
 	/// </summary>
 	/// <typeparam name="T1">тип агрумента</typeparam>
 	/// <typeparam name="TRes">тип результата</typeparam>
+	[ScriptAllowed]
 	public class ApiFunc<T1,TRes>
 	{
 		public event Func<T1, TRes> Func;

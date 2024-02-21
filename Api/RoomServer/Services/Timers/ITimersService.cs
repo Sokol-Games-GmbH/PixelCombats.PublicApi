@@ -11,6 +11,11 @@ namespace PixelCombats.Api.RoomServer.Services.Timers
 	public interface ITimersContext : IEnumerable<ITimerApi>
 	{
 		/// <summary>
+		/// возвращает массив всех таймеров
+		/// <para>Не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		ITimerApi[] All { get; }
+		/// <summary>
 		/// возвращает API для работы с таймером.
 		/// <para>если таймер еще небыл добавлен, то всеравно вернет таймер, но он будет не активным (см. <see cref="ITimerApi.IsStarted"/>)</para>
 		/// </summary>

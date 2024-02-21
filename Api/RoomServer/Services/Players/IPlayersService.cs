@@ -15,6 +15,11 @@ namespace PixelCombats.Api.RoomServer.Services.Players
 		/// </summary>
 		int Count { get; }
 		/// <summary>
+		/// возвращает всех игроков в комнате
+		/// <para>Не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		IPlayerApi[] All { get; }
+		/// <summary>
 		/// максимум игроков в комнате
 		/// </summary>
 		int MaxCount { get; }

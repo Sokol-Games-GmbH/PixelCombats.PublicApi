@@ -17,6 +17,11 @@ namespace PixelCombats.Api.RoomServer.Services.Teams
 		/// </summary>
 		int TeamsCount { get; }
 		/// <summary>
+		/// возвращает все команды
+		/// <para>не рекомендуется использование в цикле - порождает массив</para>
+		/// </summary>
+		ITeamApi[] All { get; }
+		/// <summary>
 		/// добавляет команду.
 		/// <para>Если такая команда уже существует то ничего не происходит</para>
 		/// </summary>

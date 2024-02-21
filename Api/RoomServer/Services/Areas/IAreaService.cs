@@ -52,6 +52,11 @@ namespace PixelCombats.Api.RoomServer.Services.Areas
 	public interface IAreaService : IEnumerable<IArea>
 	{
 		/// <summary>
+		/// возвращает все зоны
+		/// <para>не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		IArea[] All { get; }
+		/// <summary>
 		/// возвращает зону по ее уникальному имени
 		/// <para>если такой зоны нет, то будет создан пустой объект зоны</para>
 		/// </summary>

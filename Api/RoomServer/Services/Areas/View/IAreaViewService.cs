@@ -60,6 +60,11 @@ namespace PixelCombats.Api.RoomServer.Services.Areas.View
 	public interface IAreaViewContext : IEnumerable<IAreaView>
 	{
 		/// <summary>
+		/// возвращает все фасады визуализаторов
+		/// <para>Не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		IAreaView[] All { get; }
+		/// <summary>
 		/// возвращает фасад визуализатора по иго имени
 		/// </summary>
 		/// <param name="name">имя визуализатора</param>

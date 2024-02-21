@@ -13,6 +13,11 @@ namespace PixelCombats.Api.Client
 		/// количество игровых режимов
 		/// </summary>
 		int Count { get; }
+		/// <summary>
+		/// возвращает все игровые режимы
+		/// <para>Не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		GameModeMeta[] All { get; }
 
 		/// <summary>
 		/// возвращает игровой режим по его имени

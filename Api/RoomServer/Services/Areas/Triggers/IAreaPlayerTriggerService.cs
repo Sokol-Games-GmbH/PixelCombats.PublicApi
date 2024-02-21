@@ -82,6 +82,11 @@ namespace PixelCombats.Api.RoomServer.Services.Areas.Triggers
 	public interface IAreaPlayerTriggerService : IEnumerable<IPlayerTrigger>
 	{
 		/// <summary>
+		/// возвращает все триггеры игроков
+		/// <para>Не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		IPlayerTrigger[] All { get; }
+		/// <summary>
 		/// возвращает триггер игроков по имени
 		/// </summary>
 		/// <param name="name">имя триггера игроков</param>

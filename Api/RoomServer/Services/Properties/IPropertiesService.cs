@@ -114,15 +114,15 @@ namespace PixelCombats.Api.RoomServer.Services.Properties
 		bool TryGetProperty(string name, out IProperty property);
 
 		/// <summary>
-		/// возвращает список всех свойств
+		/// возвращает массив всех свойств
 		/// <para>результаты могут иметь интерфайсы: <see cref="IProperty"/>, <see cref="IProperty{T}"/>, <see cref="IReadOnlyProperty"/>, <see cref="IReadOnlyProperty{T}"/></para>
 		/// </summary>
-		IEnumerable<IReadOnlyProperty> GetAllProperties();
+		IReadOnlyProperty[] GetAllProperties();
 		/// <summary>
-		/// возвращает список всех свойств, доступных для чтения и записи
+		/// возвращает массив всех свойств, доступных для чтения и записи
 		/// <para>результаты могут иметь интерфайсы: <see cref="IProperty"/>, <see cref="IProperty{T}"/></para>
 		/// </summary>
-		IEnumerable<IProperty> GetProperties();
+		IProperty[] GetProperties();
 	}
 
 	/// <summary>

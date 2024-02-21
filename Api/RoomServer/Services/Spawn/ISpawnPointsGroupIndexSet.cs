@@ -14,6 +14,11 @@ namespace PixelCombats.Api.RoomServer.Services.Spawn
 		/// </summary>
 		int Count { get; }
 		/// <summary>
+		/// возвращает все группы спавнпоинтов
+		/// <para>Не рекомендуется использовать каждый раз в цикле. Выностие за цикл</para>
+		/// </summary>
+		uint[] All { get; }
+		/// <summary>
 		/// добавляет элемент в группу
 		/// </summary>
 		/// <param name="index">добавляемый элемент</param>
