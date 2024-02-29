@@ -1,5 +1,6 @@
 ﻿using PixelCombats.Annotation;
 using System;
+using JavaScriptEngine.DataAnnotations;
 
 namespace PixelCombats.Api.Basic.Structures.Math
 {
@@ -7,6 +8,8 @@ namespace PixelCombats.Api.Basic.Structures.Math
 	/// область интексов в 3Д пространстве
 	/// </summary>
 	[Serializable]
+	[ScriptAllowed]
+	[ScriptType("IndexRange", ScriptModuleNames.BASIC)]
 	public struct IndexRange
 	{
 		/// <summary>

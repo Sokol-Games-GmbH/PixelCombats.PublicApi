@@ -1,4 +1,5 @@
-﻿using PixelCombats.Annotation;
+﻿using JavaScriptEngine.DataAnnotations;
+using PixelCombats.Annotation;
 using System;
 
 namespace PixelCombats.Api.Basic.Structures.Math
@@ -7,6 +8,8 @@ namespace PixelCombats.Api.Basic.Structures.Math
 	/// индекс или воксельная координата
 	/// </summary>
 	[Serializable]
+	[ScriptAllowed]
+	[ScriptType("Index", ScriptModuleNames.BASIC)]
 	public struct Index : IComparable<Index> // todo сделать общую математическую библиотеку и вынести это туда
 	{
 		/// <summary>

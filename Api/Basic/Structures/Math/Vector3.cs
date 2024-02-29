@@ -1,9 +1,12 @@
 ﻿using System;
+using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Annotation;
 
 namespace PixelCombats.Api.Basic.Structures.Math
 {
 	[Serializable]
+	[ScriptAllowed]
+	[ScriptType("Vector3", ScriptModuleNames.BASIC)]
 	public struct Vector3
 	{
 		[SerializeMember(1)]

@@ -1,5 +1,6 @@
 ﻿using PixelCombats.Annotation;
 using System;
+using JavaScriptEngine.DataAnnotations;
 
 namespace PixelCombats.Api.RoomServer.Services.LeaderBoard
 {
@@ -7,6 +8,8 @@ namespace PixelCombats.Api.RoomServer.Services.LeaderBoard
 	/// описатель значения
 	/// </summary>
 	[Serializable]
+	[ScriptAllowed]
+	[ScriptType("DisplayValueHeader", ScriptModuleNames.BASIC)]
 	public class DisplayValueHeader
 	{
 		/// <summary>
@@ -24,5 +27,13 @@ namespace PixelCombats.Api.RoomServer.Services.LeaderBoard
 		/// </summary>
 		[SerializeMember(3)]
 		public string ShortDisplayName;
+
+		public DisplayValueHeader() { }
+		public DisplayValueHeader(string value, string displayName, string shortDisplayName)
+		{
+			Value = value;
+			DisplayName = displayName;
+			ShortDisplayName = shortDisplayName;
+		}
 	}
 }

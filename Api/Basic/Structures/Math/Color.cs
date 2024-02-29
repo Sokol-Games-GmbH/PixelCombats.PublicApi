@@ -1,4 +1,5 @@
-﻿using PixelCombats.Annotation;
+﻿using JavaScriptEngine.DataAnnotations;
+using PixelCombats.Annotation;
 using System;
 
 namespace PixelCombats.Api.Basic.Structures.Math
@@ -7,6 +8,8 @@ namespace PixelCombats.Api.Basic.Structures.Math
 	/// описывает цвет
 	/// </summary>
 	[Serializable]
+	[ScriptAllowed]
+	[ScriptType("Color", ScriptModuleNames.BASIC)]
 	public struct Color
 	{
 		/// <summary>
