@@ -16,6 +16,14 @@ namespace PixelCombats.Api.RoomServer.Services.Map
 		/// </summary>
 		MapMeta MapMeta { get; }
 		/// <summary>
+		/// ID текущей карты или 0, если ID карты не известен
+		/// </summary>
+		long MapId { get; }
+		/// <summary>
+		/// текущий список карт или 0, если список карт не задан
+		/// </summary>
+		long MapListId { get; }
+		/// <summary>
 		/// нужно ли менять карту, когда начинается новая игра
 		/// <para>карта может быть изменена только на случайную, из списка стандартных карт</para>
 		/// <para>по умолчанию <see cref="false"/></para>

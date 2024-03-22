@@ -18,8 +18,8 @@
 		/// </summary>
 		public const string MAIN_MENU = "pixel_combats/mainmenu";
 		/// <summary>
-		/// логи
+		/// дебаг
 		/// </summary>
-		public const string LOG = "pixel_combats/log";
+		public const string DEBUG = "pixel_combats/debug";
 	}
 }
