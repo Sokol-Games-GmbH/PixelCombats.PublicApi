@@ -6,7 +6,7 @@ namespace PixelCombats.Api.Basic
 	///   <para>Выводит логи на консоль</para>
 	///   <para>Восновном используется для дебага скриптов</para>
 	/// </summary>
-	[ScriptObject("log", ScriptModuleNames.LOG)]
+	[ScriptObject("log", ScriptModuleNames.DEBUG)]
 	public interface ILogService
 	{
 		/// <summary>Выволит лог в консоль</summary>
