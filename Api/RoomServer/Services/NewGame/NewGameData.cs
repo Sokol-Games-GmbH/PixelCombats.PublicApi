@@ -18,5 +18,11 @@ namespace PixelCombats.Api.RoomServer.Services.NewGame
 		/// </summary>
 		[SerializeMember(1)]
 		public long MapId;
+
+		public NewGameData(long MapId)
+		{
+	            if (MapId >= 0)
+                        this.MapId = MapId;
+		}
 	}
 }
