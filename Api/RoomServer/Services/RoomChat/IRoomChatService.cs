@@ -10,10 +10,6 @@ namespace PixelCombats.Api.RoomServer.Services.RoomChat
 	public interface IRoomChatService
 	{
 		/// <summary>
-		/// отправляет сообщение в чат комнаты
-		/// </summary>
-		void SendMessage(string text);
-		/// <summary>
 		/// возвращает все сообщения в чате
 		/// </summary>
 		RoomMessageData[] GetAllMessages();
