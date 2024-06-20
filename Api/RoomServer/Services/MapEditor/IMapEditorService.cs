@@ -48,6 +48,11 @@ namespace PixelCombats.Api.RoomServer.Services.MapEditor
 		/// <param name="blockId">id блока. 0 - стирает блоки</param>
 		void SetBlockRange(int xStart, int yStart, int zStart, int xEnd, int yEnd, int zEnd, ushort blockId);
 		/// <summary>
+		/// закрашивает область
+		/// </summary>
+		/// <param name="blockArea">область с одним блоком</param>
+		public void SetBlockArea(BlockArea blockArea);
+		/// <summary>
 		/// возвращает ID блока в указанной точке
 		/// </summary>
 		/// <param name="x">координата x</param>
@@ -61,5 +66,13 @@ namespace PixelCombats.Api.RoomServer.Services.MapEditor
 		/// <param name="index">индекс точки пространства</param>
 		/// <returns>ID блока или 0, если в точке пусто</returns>
 		ushort GetBlockId(Index index);
+		/// <summary>
+		/// возвращает все области блоков, которые содержатся в указанном диапазоне координат (зоне)
+		/// <para>это дело работает быстрее перебора по одному индексу, такчто в тех случаях,
+		/// где необходимо проверять большие области там лучше использовать этот метод</para>
+		/// </summary>
+		/// <param name="range">диапазон координат (зона)</param>
+		/// <returns>массив областей блоков</returns>
+		public BlockArea[] GetBlockAreas(IndexRange range);
 	}
 }
