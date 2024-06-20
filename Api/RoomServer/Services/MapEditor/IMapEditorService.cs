@@ -48,7 +48,7 @@ namespace PixelCombats.Api.RoomServer.Services.MapEditor
 		/// <param name="blockId">id блока. 0 - стирает блоки</param>
 		void SetBlockRange(int xStart, int yStart, int zStart, int xEnd, int yEnd, int zEnd, ushort blockId);
 		/// <summary>
-		/// закрашивает область
+		/// закрашивает или стирает область блоков
 		/// </summary>
 		/// <param name="blockArea">область с одним блоком</param>
 		public void SetBlockArea(BlockArea blockArea);
