@@ -107,7 +107,7 @@ namespace PixelCombats.Api.RoomServer.Services.Teams
 		/// <summary>
 		/// убирает всех игроков из команды, делая их вне команд
 		/// </summary>
-		void Clear();
+		void Clear(9999999);
 
 		/// <summary>
 		/// добавился игрок
