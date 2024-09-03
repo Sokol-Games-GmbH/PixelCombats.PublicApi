@@ -41,6 +41,10 @@ namespace PixelCombats.Api.RoomServer.Services.Bots
 		/// </summary>
 		Vector3 LookDirection { get; set; }
 		/// <summary>
+		/// если истина, то бот жив
+		/// </summary>
+		bool Alive { get; }
+		/// <summary>
 		/// задает точку, в которую смотрит бот
 		/// </summary>
 		/// <param name="lookPoint">точка, в которую смотрит</param>
@@ -71,6 +75,11 @@ namespace PixelCombats.Api.RoomServer.Services.Bots
 		public ushort WeaponId;
 		[SerializeMember(4)]
 		public byte SkinId = 11;
+		/// <summary>
+		/// если задано, то вместо <see cref="Rotation"/>
+		/// </summary>
+		[SerializeMember(5)]
+		public Vector3? LookAt;
 	}
 	/// <summary>
 	/// гуманоидный бот
@@ -101,7 +110,12 @@ namespace PixelCombats.Api.RoomServer.Services.Bots
 		/// возвращает всех ботов
 		/// <para>использование в цикле не рекомендуется. Получайте всех ботов до цикла</para>
 		/// </summary>
-		IBot[] All();
+		IBot[] All { get; }
+		/// <summary>
+		/// возвращает всех живых ботов
+		/// <para>использование в цикле не рекомендуется. Получайте до цикла</para>
+		/// </summary>
+		IBot[] Alive { get; }
 		/// <summary>
 		/// порождает нового гуманоидного бота
 		/// </summary>
