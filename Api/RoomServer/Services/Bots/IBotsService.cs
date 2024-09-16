@@ -107,6 +107,11 @@ namespace PixelCombats.Api.RoomServer.Services.Bots
 		/// </summary>
 		int Count { get; }
 		/// <summary>
+		/// размер пула ботов
+		/// <para>сколько максимум может быть ботов одновременно. указывать нужно максимальное число, сколько нужно создать скрытых ботов вначале, чтобы не было лага при спавне ботов</para>
+		/// </summary>
+		int PoolSize { get; set; }
+		/// <summary>
 		/// возвращает всех ботов
 		/// <para>использование в цикле не рекомендуется. Получайте всех ботов до цикла</para>
 		/// </summary>
@@ -119,8 +124,11 @@ namespace PixelCombats.Api.RoomServer.Services.Bots
 		/// <summary>
 		/// порождает нового гуманоидного бота
 		/// </summary>
-		/// <returns>гуманоидный бот</returns>
-		void CreateHuman(HumanBotSpawnData data);
+		/// <returns>гуманоидный бот или null, если вызвано не на сервере.
+		/// Возвращаемое значение рекомендуется использовать только для инициализации и только если не null.
+		/// Не храните эти значения - они не синхронизированы между игроками,
+		/// для этого есть синхронизованный метод <see cref="OnNewBot"/>, значения которого можно хранить</returns>
+		IBot CreateHuman(HumanBotSpawnData data);
 		/// <summary>
 		/// возвращает бота по его ID или null, если такого бота нет
 		/// </summary>
