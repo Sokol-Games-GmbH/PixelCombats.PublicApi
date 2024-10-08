@@ -57,7 +57,7 @@ namespace PixelCombats.Api.RoomServer.Services.Players
 		/// вращение игрока
 		/// <para>используется только x и y составляющая</para>
 		/// </summary>
-		Vector3 Rotation { get; set; }
+		Vector2 Rotation { get; set; }
 
 		/// <summary>
 		/// контекст переменных игрока (см сервис <see cref="IPropertiesService"/>)
