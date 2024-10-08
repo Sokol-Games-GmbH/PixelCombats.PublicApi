@@ -1,3 +1,7 @@
 *.meta
 *.xml
 *.asmdef
+*.csproj
+
+/Api/obj
+AssemblyReference.cs

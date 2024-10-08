@@ -1,5 +1,7 @@
 ﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace PixelCombats.Api.Client.MainMenu.Services.RoomConstructor
 {
@@ -13,7 +15,8 @@ namespace PixelCombats.Api.Client.MainMenu.Services.RoomConstructor
 		/// попытка создать комнату
 		/// </summary>
 		/// <param name="parameters">параметры моздания комнаты</param>
-		void TryCreateRoom(RoomCreationParameters parameters);
+		/// <param name="ct">токен завершения</param>
+		Task<bool> TryCreateRoom(RoomCreationParameters parameters, CancellationToken ct = new());
 
 		/// <summary>
 		/// 

@@ -2,7 +2,6 @@
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 using System;
-using System.Collections.Generic;
 
 namespace PixelCombats.Api.RoomServer.Services.Properties
 {
