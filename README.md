@@ -6,6 +6,7 @@
 - [РЕДАКТОР](https://github.com/kkohno/PixelCombats.GameModes.Editor)
 - [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM)
 - [МИР](https://github.com/kkohno/PixelCombats.GameModes.Peace)
+- [Туториал](https://github.com/kkohno/PixelCombats.GameModes.Tutorial)
 ## Как сообщить о баге
 - Сообщить о баге или проблеме можно в специальном [разделе Issues](https://github.com/Sokol-Games-GmbH/PixelCombats.PublicApi/issues).
 - Когда открываете issue (проблему) - не пишите все в кучу а пишите ровно по одной проблеме или багу.
