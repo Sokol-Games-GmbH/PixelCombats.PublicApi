@@ -42,7 +42,7 @@ namespace PixelCombats.Api.Client.MainMenu.Services.RoomConstructor
 		/// <summary>
 		/// параметры, для передачи в игровой режим
 		/// </summary>
-		public GameModeParametersValues Addition;
+		public GameModeParametersValues Parameters;
 
 		/// <summary>
 		/// если истина, то карта кастомная
