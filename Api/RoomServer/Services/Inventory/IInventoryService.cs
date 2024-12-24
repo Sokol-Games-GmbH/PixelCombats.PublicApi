@@ -1,9 +1,59 @@
 ﻿using JavaScriptEngine.DataAnnotations;
+using PixelCombats.Annotation;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
+using System;
 
 namespace PixelCombats.Api.RoomServer.Services.Inventory
 {
+	/// <summary>
+	/// типы выдачи итемов
+	/// </summary>
+	public enum GetInventoryItemTypes
+	{
+		/// <summary>
+		/// выдать оружие и его патроны полным комплектом
+		/// </summary>
+		Default = 0,
+		/// <summary>
+		/// выдать только один магазин
+		/// </summary>
+		OneMagazine = 1,
+		/// <summary>
+		/// выдать без боекомплекта
+		/// </summary>
+		HasNoAmmo = 2,
+		/// <summary>
+		/// количество патронов указано отдельно
+		/// </summary>
+		WithAmmoCount = 3
+	}
+	/// <summary>
+	/// параметры выдачи итема в инвентарь
+	/// </summary>
+	[Serializable]
+	[ScriptAllowed]
+	[ScriptType("GetInventoryItemParams", ScriptModuleNames.ROOM_API)]
+	public class GetInventoryItemParams
+	{
+		/// <summary>
+		/// ID итема или оружия
+		/// </summary>
+		[SerializeMember(1)]
+		public int Id;
+		/// <summary>
+		/// тип выдачи
+		/// <para>0 - выдать оружие и его патроны полным комплектом</para>
+		/// <para>1 - выдать оружие без</para>
+		/// </summary>
+		[SerializeMember(2)]
+		public GetInventoryItemTypes GetItemType;
+		/// <summary>
+		/// используется, для указания количества патронов в некоторых типах выдачи итемов
+		/// </summary>
+		[SerializeMember(3)]
+		public int AmmoCount;
+	}
 	/// <summary>
 	/// логика инвентаря
 	/// </summary>
@@ -55,6 +105,22 @@ namespace PixelCombats.Api.RoomServer.Services.Inventory
 		/// </summary>
 		/// <param name="slots">массив слотов или столы через запятую (слоты нумеруются с 1)</param>
 		public void Restore(params byte[] slots);
+		/// <summary>
+		/// частично пополняет боекомплект имеющегося оружия (по одному рожку)
+		/// </summary>
+		public void RestoreMagazine();
+		/// <summary>
+		/// частично пополняет боекомплект указанных слотов (по одному рожку)
+		/// </summary>
+		/// <param name="slots">массив слотов или столы через запятую (слоты нумеруются с 1)</param>
+		public void RestoreMagazine(params byte[] slots);
+		/// <summary>
+		/// попытка задать первое из массива итемов (оружий)
+		/// <para>ставит только ту вещ, которая у игрока имеется (куплена) а также если для этой вещи разрешен слот</para>
+		/// <para>если ни один из вещей задать игроку нельзя то ничего не делает</para>
+		/// </summary>
+		/// <param name="items">массив ID вещей, первый доступный из которых, будет установлен</param>
+		public void TrySetFirstItem(params GetInventoryItemParams[] items);
 
 		/// <summary>
 		/// настройки инвентаря в данном контексте
