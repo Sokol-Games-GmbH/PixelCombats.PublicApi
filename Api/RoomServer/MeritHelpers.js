@@ -85,11 +85,20 @@ var MeritHelpers = {
 	},
 
 	getCurrentWeaponId: function(player) {
-		// TODO: заменить на реальный источник
+		// 1) предпочтительно: читать из свойств игрока (устанавливается мостиком при попадании)
+		try {
+			const prop = player?.Properties?.Get?.("LastWeaponId");
+			if (prop && typeof prop.Value === 'number') return prop.Value;
+		} catch(e) {}
+		// 2) запасной вариант: из инвентаря
 		try { return player?.Inventory?.CurrentWeapon?.Id ?? 0; } catch (e) { return 0; }
 	},
 	getLastHitWasHeadshot: function(victim) {
-		// TODO: заменить на реальный источник
+		// 1) предпочтительно: читать флаг из свойств жертвы, установленный мостиком
+		try {
+			const prop = victim?.Properties?.Get?.("LastHitWasHeadshot");
+			if (prop && typeof prop.Value === 'boolean') return prop.Value === true;
+		} catch(e) {}
 		return false;
 	}
 };
