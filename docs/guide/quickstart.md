@@ -40,4 +40,5 @@ Ui.GetContext().Hint.Value = "Hint/AttackEnemies";
 - `gamemode.json` и параметры: [gamemode_json.md](gamemode_json.md)
 - Обзор модулей и контекстов: [modules_overview.md](modules_overview.md)
 - Сервисы (справочник): см. раздел «Сервисы» в главной документации
+- Примеры в официальных режимах: [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM), [Peace](https://github.com/kkohno/PixelCombats.GameModes.Peace), [Editor](https://github.com/kkohno/PixelCombats.GameModes.Editor), [Parcour](https://github.com/kkohno/PixelCombats.GameModes.Parcour), [Capture](https://github.com/kkohno/PixelCombats.GameModes.Capture)
 

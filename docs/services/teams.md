@@ -8,7 +8,7 @@
 - `Teams.GetEnumerator()` — перечисление команд.
 - События: `Teams.OnRequestJoinTeam`, `Teams.OnPlayerChangeTeam`.
 
-Примеры:
+Примеры (смотрите также готовые настройки команд в режимах [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM) и [Capture](https://github.com/kkohno/PixelCombats.GameModes.Capture)):
 ```javascript
 // создание 2 команд и настройка спавнов
 Teams.Add("Blue", "Teams/Blue", { b: 1 });

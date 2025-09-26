@@ -9,7 +9,7 @@
 - `context.Get(name)` — получить/создать свойство по имени
 - `prop.Value` — значение свойства; `prop.OnValue.Add(handler)` — событие изменения
 
-Примеры:
+Примеры (подобные счётчики применяются в [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM) и [Def](https://github.com/kkohno/PixelCombats.GameModes.TDM) сценариях):
 ```javascript
 // свойство состояния игры
 var stateProp = Properties.GetContext().Get("State");

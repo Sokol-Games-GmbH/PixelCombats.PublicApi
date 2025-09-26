@@ -1,6 +1,6 @@
 ## Обзор модулей и контекстов (JS)
 
-Скрипты выполняются в интерпретаторе Jint и имеют доступ к модулям API. Основные сущности:
+Скрипты имеют доступ к модулям API. Основные сущности:
 
 - Глобальные объекты-сервисы: `Teams`, `Spawns`, `Timers`, `Properties`, `GameMode`, `Damage`, `Inventory`, `Map`, `Build`, `BreackGraph`, `LeaderBoard`, `Ui`, `Game`, `Players`, `Validate`, `AreaService`, `AreaViewService`, `AreaPlayerTriggerService`, и др.
 - Контексты: многие сервисы имеют метод `GetContext([scope])`, возвращающий объект контекста для всей комнаты или для конкретной команды/игрока. Примеры:
@@ -26,5 +26,6 @@ Damage.OnDeath.Add(function(player) {
 });
 ```
 
-Смотрите подробности в разделах «Сервисы» и «Поваренная книга».
+Смотрите подробности в разделах «Сервисы» и «Поваренная книга», а также в примерах официальных режимов:
+[TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM), [Peace](https://github.com/kkohno/PixelCombats.GameModes.Peace), [Editor](https://github.com/kkohno/PixelCombats.GameModes.Editor), [Parcour](https://github.com/kkohno/PixelCombats.GameModes.Parcour), [Capture](https://github.com/kkohno/PixelCombats.GameModes.Capture).
 

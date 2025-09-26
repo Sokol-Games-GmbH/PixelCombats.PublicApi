@@ -10,7 +10,7 @@
 - `Timers.OnPlayerTimer` — событие таймеров игроков
 - `timer.OnTimer.Add(handler)` — событие срабатывания таймера
 
-Примеры:
+Примеры (см. также логику таймеров в [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM) и [Capture](https://github.com/kkohno/PixelCombats.GameModes.Capture)):
 ```javascript
 // главный таймер комнаты
 var main = Timers.GetContext().Get("Main");

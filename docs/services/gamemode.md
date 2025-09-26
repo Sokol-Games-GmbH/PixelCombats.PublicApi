@@ -12,3 +12,7 @@ Map.Rotation = GameMode.Parameters.GetBool("MapRotation");
 var length = GameMode.Parameters.Get("default_game_mode_length");
 ```
 
+Смотрите примеры использования параметров в режимах: 
+[TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM) и 
+[Peace](https://github.com/kkohno/PixelCombats.GameModes.Peace).
+

@@ -17,5 +17,10 @@ client/
 - `client/room/` — здесь лежат JS-скрипты, исполняемые в контексте комнаты.
 - Разбивайте логику по модулям, чтобы код был понятнее.
 
-Смотрите примеры в предоставленных репозиториях режимов (TDM, Peace, Editor, Parcour, Capture).
+Смотрите примеры в предоставленных репозиториях режимов:
+- [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM)
+- [Мир (Peace)](https://github.com/kkohno/PixelCombats.GameModes.Peace)
+- [Редактор (Editor)](https://github.com/kkohno/PixelCombats.GameModes.Editor)
+- [Паркур (Parcour)](https://github.com/kkohno/PixelCombats.GameModes.Parcour)
+- [Захват (Capture)](https://github.com/kkohno/PixelCombats.GameModes.Capture)
 

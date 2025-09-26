@@ -53,10 +53,10 @@ var rotate = GameMode.Parameters.GetBool("MapRotation");
 var length = GameMode.Parameters.Get("default_game_mode_length");
 ```
 
-Полные примеры смотрите в официальных режимах и в файлах:
-- `PixelCombats.GameModes.TDM/gamemode.json`
-- `PixelCombats.GameModes.Peace/gamemode.json`
-- `PixelCombats.GameModes.Editor/gamemode.json`
-- `PixelCombats.GameModes.Parcour/gamemode.json`
-- `PixelCombats.GameModes.Capture/gamemode.json`
+Полные примеры смотрите в официальных репозиториях режимов:
+- [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM)
+- [Мир (Peace)](https://github.com/kkohno/PixelCombats.GameModes.Peace)
+- [Редактор (Editor)](https://github.com/kkohno/PixelCombats.GameModes.Editor)
+- [Паркур (Parcour)](https://github.com/kkohno/PixelCombats.GameModes.Parcour)
+- [Захват (Capture)](https://github.com/kkohno/PixelCombats.GameModes.Capture)
 

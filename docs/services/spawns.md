@@ -11,7 +11,7 @@
 - `Spawns.OnSpawn` — событие спавна игрока
 - `player.Spawns.Spawn()` — заспавнить конкретного игрока
 
-Пример:
+Пример (аналогичные настройки есть в [Editor](https://github.com/kkohno/PixelCombats.GameModes.Editor) и [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM)):
 ```javascript
 // моментальный респавн и стартовое появление
 Spawns.GetContext().RespawnTime.Value = 0;
