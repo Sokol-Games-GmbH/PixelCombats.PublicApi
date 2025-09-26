@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using PixelCombats.DTO.Room.GameMode;
+﻿using PixelCombats.DTO.Room.GameMode;
 using PixelCombats.DTO.Room.Map;
+using System.Threading.Tasks;
 
 namespace PixelCombats.Api.Client.MainMenu.Services.RoomList
 {
@@ -48,6 +48,10 @@ namespace PixelCombats.Api.Client.MainMenu.Services.RoomList
 		/// </summary>
 		bool IsOpen { get; }
 		/// <summary>
+		/// минимальный лвл в комнате или 0
+		/// </summary>
+		int MinLvl { get; }
+		/// <summary>
 		/// игровой режим
 		/// </summary>
 		GameModeMeta GameMode { get; }
@@ -66,7 +70,7 @@ namespace PixelCombats.Api.Client.MainMenu.Services.RoomList
 		/// <summary>
 		/// если истина, то версия игрового режима подходит для текущего клиента
 		/// </summary>
-		bool IsGameModeVersionCorrect { get; }
+		bool IsClientVersionCorrectForGameMode { get; }
 		/// <summary>
 		/// версия сетевого протокола
 		/// </summary>

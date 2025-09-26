@@ -1,6 +1,7 @@
 ﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
+using PixelCombats.Api.RoomServer.Services.Players;
 
 namespace PixelCombats.Api.RoomServer.Services.Build
 {

@@ -2,9 +2,53 @@
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Interfaces;
 using PixelCombats.Api.RoomServer.Services.Players;
+using System.Collections.Generic;
 
 namespace PixelCombats.Api.RoomServer.Services.Damage
 {
+	/// отчёт о смерти жертвы с вкладом всех причастных
+	public interface IKillReport
+	{
+		/// <summary>
+		/// жертва
+		/// </summary>
+		IPlayerApi Victim { get; }
+		/// <summary>
+		/// кто убил
+		/// </summary>
+		/// <para>если суицид — Victim</para>
+		IPlayerApi Killer { get; }
+		/// <summary>
+		/// убившее попадание
+		/// </summary>
+		IHitData KillHit { get; }
+		/// <summary>
+		/// вначале убийца, потом отсортировано по убыванию урона помошь в убийстве (ассист), если таковые имеются
+		/// </summary>
+		IList<IKillContributionItem> Items { get; }
+	}
+
+	/// элемент вклада конкретного атакующего
+	public interface IKillContributionItem
+	{
+		/// <summary>
+		/// кто нанес урон
+		/// </summary>
+		IPlayerApi Attacker { get; }
+		/// <summary>
+		/// нанесенный урон, который засчитан в поддержку
+		/// </summary>
+		float Damage { get; }
+		/// <summary>
+		/// количество засчитанных в поддержку попаданий
+		/// </summary>
+		int Hits { get; }
+		/// <summary>
+		/// это финальный убийца
+		/// </summary>
+		bool IsKiller { get; }
+	}
+
 	/// <summary>
 	/// контекст урона
 	/// </summary>
@@ -59,8 +103,15 @@ namespace PixelCombats.Api.RoomServer.Services.Damage
 		/// <summary>
 		/// первый игрок нанес второму урон
 		/// <para>также отработает урон сам себе</para>
+		/// <para>устарело, используйте OnHit</para>
 		/// </summary>
 		ApiEvent<IPlayerApi, IPlayerApi, float> OnDamage { get; }
+		/// <summary>
+		/// отрабатывает любое попадание (урон)
+		/// <para>также отработает урон сам себе</para>
+		/// <para>первый аргумент кто нанес урон, кторой кому, третий - детали попадания</para>
+		/// </summary>
+		ApiEvent<IPlayerApi, IPlayerApi, IHitData> OnHit { get; }
 		/// <summary>
 		/// один игрок убил другого или сам себя
 		/// </summary>
@@ -69,5 +120,9 @@ namespace PixelCombats.Api.RoomServer.Services.Damage
 		/// игрок умер по какой-либо причине
 		/// </summary>
 		ApiEvent<IPlayerApi> OnDeath { get; }
+		/// <summary>
+		/// детальный отчёт по убийству с вкладом всех, кто нанёс урон в окне времени
+		/// </summary>
+		ApiEvent<IPlayerApi, IPlayerApi, IKillReport> OnKillReport { get; }
 	}
 }

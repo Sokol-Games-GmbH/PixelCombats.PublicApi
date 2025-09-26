@@ -1,6 +1,9 @@
 ﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Api.Basic.Structures.Math;
 using PixelCombats.Api.RoomServer.Services.Areas;
+using PixelCombats.Api.RoomServer.Basic;
+using PixelCombats.Api.RoomServer.Services.Players;
+using PixelCombats.Api.RoomServer.Services.Build;
 
 namespace PixelCombats.Api.RoomServer.Services.MapEditor
 {
@@ -74,5 +77,10 @@ namespace PixelCombats.Api.RoomServer.Services.MapEditor
 		/// <param name="range">диапазон координат (зона)</param>
 		/// <returns>массив областей блоков</returns>
 		public BlockArea[] GetBlockAreas(IndexRange range);
+
+		/// <summary>
+		/// событие: любое редактирование блоков (размещение/изменение/удаление)
+		/// </summary>
+		ApiEvent<IPlayerApi, IMapChangeDetails> OnMapEdited { get; }
 	}
 }

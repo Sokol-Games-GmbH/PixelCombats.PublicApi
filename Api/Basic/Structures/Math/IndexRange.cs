@@ -1,11 +1,11 @@
-﻿using PixelCombats.Annotation;
+﻿using JavaScriptEngine.DataAnnotations;
+using PixelCombats.Annotation;
 using System;
-using JavaScriptEngine.DataAnnotations;
 
 namespace PixelCombats.Api.Basic.Structures.Math
 {
 	/// <summary>
-	/// область интексов в 3Д пространстве
+	/// область индексов в 3Д пространстве
 	/// </summary>
 	[Serializable]
 	[ScriptAllowed]
@@ -27,6 +27,10 @@ namespace PixelCombats.Api.Basic.Structures.Math
 		/// размер области
 		/// </summary>
 		public Index Size => End - Start;
+		/// <summary>
+		/// количество индексов (блоков) в области
+		/// </summary>
+		public int BlocksCount => (End.x - Start.x) * (End.y - Start.y) * (End.z - Start.z);
 		/// <summary>
 		/// возвращает точку центра
 		/// </summary>
@@ -50,6 +54,16 @@ namespace PixelCombats.Api.Basic.Structures.Math
 		{
 			this.Start = new Index(startX, startY, startZ);
 			this.End = new Index(endX, endY, endZ);
+		}
+		/// <summary>
+		/// создает область индексов
+		/// </summary>
+		/// <param name="start">начало</param>
+		/// <param name="end">конец</param>
+		public IndexRange(Index start, Index end)
+		{
+			this.Start = start;
+			this.End = end;
 		}
 		public override string ToString()
 		{

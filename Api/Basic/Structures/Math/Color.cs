@@ -42,6 +42,22 @@ namespace PixelCombats.Api.Basic.Structures.Math
 			this.a = a;
 		}
 
+		public Color(float r, float g, float b)
+		{
+			this.r = r;
+			this.g = g;
+			this.b = b;
+			this.a = 0;
+		}
+
+		public Color(Color color)
+		{
+			this.r = color.r;
+			this.g = color.g;
+			this.b = color.b;
+			this.a = color.a;
+		}
+
 		public bool Equals(Color other)
 		{
 			return r.Equals(other.r) && g.Equals(other.g) && b.Equals(other.b) && a.Equals(other.a);
