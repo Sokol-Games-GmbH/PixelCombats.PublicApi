@@ -1,7 +1,16 @@
 # Добро Пожаловать!
 Данный репозиторий предназначен для продвинутых тестировщиков и разработчиков режимов игры [PixelCombats](https://play.google.com/store/apps/details?id=com.pixel.gun.combats). Здесь разработчиками выкладывается [последний API режимов](https://github.com/Sokol-Games-GmbH/PixelCombats.PublicApi/tree/main/Api) и [документация](docs/doc.md), любой может проинформировать о проблемах и багах, предложить улучшения по игре.
 ## Как создавать игровые режимы
-Используя [API](https://github.com/Sokol-Games-GmbH/PixelCombats.PublicApi/tree/main/Api) можно писать свои режимы в игре, для этого у нас есть [документация по созданию режимов](docs/doc.md)
+Используя [API](https://github.com/Sokol-Games-GmbH/PixelCombats.PublicApi/tree/main/Api) можно писать свои режимы в игре.
+
+Новая подробная документация по JavaScript-API:
+- Быстрый старт: [docs/guide/quickstart.md](docs/guide/quickstart.md)
+- Формат `gamemode.json`: [docs/guide/gamemode_json.md](docs/guide/gamemode_json.md)
+- Обзор модулей и контекстов: [docs/guide/modules_overview.md](docs/guide/modules_overview.md)
+- Сервисы (справочник): смотрите разделы в `docs/services/`
+- Поваренная книга: [docs/cookbook/index.md](docs/cookbook/index.md)
+
+Старый документ по созданию режимов: [docs/doc.md](docs/doc.md)
 ### Для тех, кто хочет изучать АПИ по примерам - вот репозитории, где мы делаем официальные режимы, они в открытом доступе!
 - [РЕДАКТОР](https://github.com/kkohno/PixelCombats.GameModes.Editor)
 - [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM)
