@@ -7,8 +7,12 @@
 - Быстрый старт: [docs/guide/quickstart.md](docs/guide/quickstart.md)
 - Формат `gamemode.json`: [docs/guide/gamemode_json.md](docs/guide/gamemode_json.md)
 - Обзор модулей и контекстов: [docs/guide/modules_overview.md](docs/guide/modules_overview.md)
-- Сервисы (справочник): смотрите разделы в `docs/services/`
+- Сервисы (справочник): [список всех сервисов](docs/doc.md#сервисы-js-api) и [папка `docs/services/`](docs/services/)
 - Поваренная книга: [docs/cookbook/index.md](docs/cookbook/index.md)
+
+### Флаг режима PopupsEnabled
+- Включает/выключает всплывающие сообщения (попапы) в режиме. По умолчанию — выключено (`false`).
+- Флаг задаётся в корне `gamemode.json` и проверяется на сервере. Подробнее: [docs/guide/gamemode_json.md](docs/guide/gamemode_json.md).
 
 Старый документ по созданию режимов: [docs/doc.md](docs/doc.md)
 ### Для тех, кто хочет изучать АПИ по примерам - вот репозитории, где мы делаем официальные режимы, они в открытом доступе!

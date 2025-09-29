@@ -14,6 +14,8 @@
 - `Parameters` (объект) — параметры режима, отображаемые в UI комнаты.
   - `Bool` (массив) — булевы параметры.
   - `Dropdown` (массив) — выпадающие списки.
+ - `PopupsEnabled` (булево, опционально) — включает всплывающие сообщения (попапы) в режиме. 
+   По умолчанию `false`. Проверяется на сервере, изменить с клиента нельзя.
 
 Схемы параметров:
 ```json
@@ -51,6 +53,18 @@
 var rotate = GameMode.Parameters.GetBool("MapRotation");
 // дропдаун (строка)
 var length = GameMode.Parameters.Get("default_game_mode_length");
+```
+
+Пример с флагом PopupsEnabled:
+```json
+{
+  "Name": "TDM",
+  "Description": "Team Death Match",
+  "StartClientVersion": 703,
+  "PopupsEnabled": true,
+  "MapFilter": { "HasParcourEnd": false },
+  "Parameters": { /* ... */ }
+}
 ```
 
 Полные примеры смотрите в официальных репозиториях режимов:

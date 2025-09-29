@@ -42,6 +42,10 @@
  - Попапы: [services/popups.md](services/popups.md)
  - Валидатор: [services/validate.md](services/validate.md)
 
+### Важно
+- Для использования всплывающих сообщений (попапов) в режиме необходимо включить флаг `PopupsEnabled` в корне файла `gamemode.json`. 
+  По умолчанию попапы выключены; флаг хранится на сервере и не может быть изменён с клиента. См. раздел: [guide/gamemode_json.md](guide/gamemode_json.md).
+
 ### Официальные примеры режимов
 - [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM)
 - [Мир](https://github.com/kkohno/PixelCombats.GameModes.Peace)
