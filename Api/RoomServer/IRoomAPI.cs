@@ -19,6 +19,13 @@ namespace PixelCombats.Api.RoomServer
 	[ScriptObject("room", ScriptModuleNames.ROOM_API)]
 	public interface IRoomApi : IPopups // todo упразднить попуп перенести в отдельный объект
 	{
+		/// <summary>
+		/// включает или выключает в комнате возможность отправки всплывающих сообщений
+		/// <para>задавать можно только в момент инициализации</para>
+		/// <para>по умолчанию выключено</para>
+		/// </summary>
+		bool PopupsEnable { get; set; }
+
 		IPropertiesService Properties { get; }
 		IPlayersService Players { get; }
 		ITeamsService Teams { get; }

@@ -10,10 +10,6 @@ namespace PixelCombats.Api.RoomServer.Services.GameMode
 	public interface IGameModeService
 	{
 		/// <summary>
-		/// скрипт игрового режима
-		/// </summary>
-		//string Script { get; }
-		/// <summary>
 		/// текущий игровой режим
 		/// </summary>
 		GameModeMeta Value { get; }
