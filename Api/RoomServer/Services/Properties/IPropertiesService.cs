@@ -139,12 +139,7 @@ namespace PixelCombats.Api.RoomServer.Services.Properties
 		/// </summary>
 		IProperty<bool> IsOpen { get; }
 		/// <summary>
-		/// длина текущей карты (только чтение)
-		/// <para>0 - None, 1 - Fast, 2 - Medium, 3 - Long, 4 - ExtraLong</para>
-		/// </summary>
-		IReadOnlyProperty<int> MapLength { get; }
-
-		/// <summary>
+		/// при смене значения какого-либо свойства в контексте
 		/// при смене значения какого-либо свойства в контексте
 		/// </summary>
 		ApiEvent<IRoomPropertiesContext, IReadOnlyProperty> OnProperty { get; }

@@ -9,6 +9,9 @@
 - `context.Get(name)` — получить/создать свойство по имени
 - `prop.Value` — значение свойства; `prop.OnValue.Add(handler)` — событие изменения
 
+Примечание:
+- Свойство длины карты `MapLength` удалено. Вместо него используйте параметр режима `GameMode.Parameters.GetString("GameLength")` (значения: `Length_S`, `Length_M`, `Length_L`, `Length_XL`).
+
 Примеры (подобные счётчики применяются в [TDM](https://github.com/kkohno/PixelCombats.GameModes.TDM) и [Def](https://github.com/kkohno/PixelCombats.GameModes.TDM) сценариях):
 ```javascript
 // свойство состояния игры
