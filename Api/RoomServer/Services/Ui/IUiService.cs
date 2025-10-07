@@ -15,6 +15,7 @@ namespace PixelCombats.Api.RoomServer.Services.Ui
 		IApiProp<string, IUIContext> MainTimerId { get; }
 		/// <summary>
 		/// подсказка
+		/// <para>может быть ключем локализации</para>
 		/// </summary>
 		IApiProp<string, IUIContext> Hint { get; }
 		/// <summary>
@@ -53,5 +54,11 @@ namespace PixelCombats.Api.RoomServer.Services.Ui
 	[ScriptObject("Ui", ScriptModuleNames.ROOM_API)]
 	public interface IUiService :
 		IContextedService<IRoomUIContext, ITeamUIContext, IPlayerUIContext>
-	{ }
+	{
+		/// <summary>
+		/// отображаетсф ли изменение набранных очков выше прицела. по умолчанию false
+		/// <para>задается только при инициализации</para>
+		/// </summary>
+		bool ScoresTopViewEnable { get; set; }
+	}
 }
