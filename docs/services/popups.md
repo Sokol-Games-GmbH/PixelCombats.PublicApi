@@ -40,3 +40,5 @@ p.PopUp("mode.description");
 p.PopUp("Сражайтесь за свою команду!");
 ```
 
+См. также: локализация режимов и ключи в `gamemode.json` — [Localization](../guide/localization.md)
+
