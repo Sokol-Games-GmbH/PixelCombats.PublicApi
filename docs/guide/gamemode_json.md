@@ -109,3 +109,56 @@ var length = GameMode.Parameters.Get("default_game_mode_length");
 - [Паркур (Parcour)](https://github.com/kkohno/PixelCombats.GameModes.Parcour)
 - [Захват (Capture)](https://github.com/kkohno/PixelCombats.GameModes.Capture)
 
+### Стандартный параметр размеров карт: GameLength
+
+Система поддерживает стандартный параметр `GameLength`, который определяет «длину» (размер) партии на карте. Этот параметр:
+
+- распознаётся системой автоматически, если объявлен в `ParametersDeclaration` как строковый `Name = "GameLength"`;
+- отображается в списках комнат (S/M/L/XL);
+- доступен в API сценариев режима через `GameMode.Parameters.GetString('GameLength')`;
+
+Поддерживаемые значения:
+- `Length_S` — короткая сессия
+- `Length_M` — средняя сессия
+- `Length_L` — длинная сессия
+- `Length_XL` — очень длинная сессия
+
+Объявление в `ParametersDeclaration` (пример):
+```json
+{
+  "ParametersDeclaration": [
+    {
+      "Name": "GameLength",
+      "Type": "String",
+      "Default": "Length_M"
+    }
+  ]
+}
+```
+
+Доступ из сценария режима (JS):
+```javascript
+// получить текущую длину из параметров режима
+const length = GameMode.Parameters.GetString('GameLength');
+```
+
+Пример использования в режиме TDM (фрагмент `gamemode.json`):
+```json
+{
+  "MapLists": [
+    { "MapListId": 24854, "Name": "S",  "Parameters": { "GameLength": "Length_S"  } },
+    { "MapListId": 24855, "Name": "M",  "Parameters": { "GameLength": "Length_M"  } },
+    { "MapListId": 24856, "Name": "L",  "Parameters": { "GameLength": "Length_L"  } },
+    { "MapListId": 24857, "Name": "XL", "Parameters": { "GameLength": "Length_XL" } }
+  ]
+}
+```
+
+Таким образом, при выборе соответствующего списка карт в лобби значение `GameLength` переопределяется, и сценарии/системы (например, миссии) могут подстраивать логику под длину матча.
+
+В референсных скриптах вы можете увидеть прямое использование значения длины, например, в расчётах очков (JS):
+```javascript
+// см. damage_scores.js
+const length = GameMode.Parameters.GetString('GameLength');
+```
+
