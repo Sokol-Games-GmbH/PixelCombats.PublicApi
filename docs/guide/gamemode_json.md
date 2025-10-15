@@ -118,10 +118,10 @@ var length = GameMode.Parameters.Get("default_game_mode_length");
 - доступен в API сценариев режима через `GameMode.Parameters.GetString('GameLength')`;
 
 Поддерживаемые значения:
-- `Length_S` — короткая сессия
-- `Length_M` — средняя сессия
-- `Length_L` — длинная сессия
-- `Length_XL` — очень длинная сессия
+- `S` — короткая сессия
+- `M` — средняя сессия
+- `L` — длинная сессия
+- `XL` — очень длинная сессия
 
 Объявление в `ParametersDeclaration` (пример):
 ```json
@@ -130,7 +130,7 @@ var length = GameMode.Parameters.Get("default_game_mode_length");
     {
       "Name": "GameLength",
       "Type": "String",
-      "Default": "Length_M"
+      "Default": "M"
     }
   ]
 }
@@ -140,16 +140,19 @@ var length = GameMode.Parameters.Get("default_game_mode_length");
 ```javascript
 // получить текущую длину из параметров режима
 const length = GameMode.Parameters.GetString('GameLength');
+
+// или использовать специальное свойство (рекомендуется)
+const length = GameMode.Parameters.GameLength;
 ```
 
 Пример использования в режиме TDM (фрагмент `gamemode.json`):
 ```json
 {
   "MapLists": [
-    { "MapListId": 24854, "Name": "S",  "Parameters": { "GameLength": "Length_S"  } },
-    { "MapListId": 24855, "Name": "M",  "Parameters": { "GameLength": "Length_M"  } },
-    { "MapListId": 24856, "Name": "L",  "Parameters": { "GameLength": "Length_L"  } },
-    { "MapListId": 24857, "Name": "XL", "Parameters": { "GameLength": "Length_XL" } }
+    { "MapListId": 24854, "Name": "S",  "Parameters": { "GameLength": "S"  } },
+    { "MapListId": 24855, "Name": "M",  "Parameters": { "GameLength": "M"  } },
+    { "MapListId": 24856, "Name": "L",  "Parameters": { "GameLength": "L"  } },
+    { "MapListId": 24857, "Name": "XL", "Parameters": { "GameLength": "XL" } }
   ]
 }
 ```
@@ -160,5 +163,15 @@ const length = GameMode.Parameters.GetString('GameLength');
 ```javascript
 // см. damage_scores.js
 const length = GameMode.Parameters.GetString('GameLength');
+
+// или используя специальное свойство (более читаемо)
+const length = GameMode.Parameters.GameLength;
 ```
+
+**Удобное свойство GameLength:**
+Для упрощения работы с размером карт добавлено специальное свойство `GameMode.Parameters.GameLength`, которое:
+- Эквивалентно `GameMode.Parameters.GetString('GameLength')`
+- Возвращает пустую строку, если размер не определен
+- Доступно в API режимов и помечено атрибутом `[ScriptAllowed]`
+- Рекомендуется для использования вместо прямого вызова `GetString("GameLength")`
 
