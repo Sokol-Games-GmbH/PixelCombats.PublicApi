@@ -18,5 +18,10 @@ namespace PixelCombats.Api.RoomServer.Services.NewGame
 		/// </summary>
 		[SerializeMember(1)]
 		public long MapId;
+		/// <summary>
+		/// id списка карт или 0, если список оставить тотже
+		/// </summary>
+		[SerializeMember(2)]
+		public long MapListId;
 	}
 }

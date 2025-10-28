@@ -1,8 +1,8 @@
 ﻿using JavaScriptEngine.DataAnnotations;
 using PixelCombats.Annotation;
-using System;
 using PixelCombats.Api.RoomServer.Basic;
 using PixelCombats.Api.RoomServer.Services.NewGame;
+using System;
 
 namespace PixelCombats.Api.RoomServer.Services.NewGameVote
 {
@@ -41,6 +41,116 @@ namespace PixelCombats.Api.RoomServer.Services.NewGameVote
 		[SerializeMember(2)]
 		public double EndTime;
 	}
+
+	#region система запросов вариантов игр
+	/// <summary>
+	/// запрос на получение вариантов новой игры
+	/// </summary>
+	public interface INewGameVariantsRequest { }
+
+	/// <summary>
+	/// описывает конкретный вариант
+	/// </summary>
+	[ScriptType("Variant", ScriptModuleNames.NEW_GAME_VOTE_TYPES)]
+	[ScriptAllowed]
+	public class Variant : INewGameVariantsRequest
+	{
+		/// <summary>
+		/// ID карты или 0, если таже самая карта
+		/// </summary>
+		public long MapId { get; set; }
+		/// <summary>
+		/// ID списка карт или 0, если тотже самый список карт
+		/// </summary>
+		public long MapListId { get; set; }
+
+		public Variant() { }
+		public Variant(long mapId, long mapListId)
+		{
+			this.MapId = mapId;
+			this.MapListId = mapListId;
+		}
+	}
+
+	/// <summary>
+	/// тотже самый вариант, который сейчас играется
+	/// </summary>
+	[ScriptType("SameVariant", ScriptModuleNames.NEW_GAME_VOTE_TYPES)]
+	[ScriptAllowed]
+	public sealed class SameVariant : Variant
+	{
+		public SameVariant() : base(0, 0) { }
+	}
+
+	/// <summary>
+	/// если задано в наборе запросов вариантов, то результат отбросит все не уникальное
+	/// <para>в наборе может быть только один запрос уникальности</para>
+	/// </summary>
+	[ScriptType("OnlyUniqueVariants", ScriptModuleNames.NEW_GAME_VOTE_TYPES)]
+	[ScriptAllowed]
+	public sealed class OnlyUniqueVariants : INewGameVariantsRequest
+	{
+		/// <summary>
+		/// если истина, то карты уникальные
+		/// </summary>
+		public bool MapUnique { get; set; }
+		/// <summary>
+		/// если истина, то списки карт уникальные
+		/// </summary>
+		public bool MapListUnique { get; set; }
+
+		public OnlyUniqueVariants(bool mapUnique = true, bool mapListUnique = true)
+		{
+			this.MapUnique = mapUnique;
+			this.MapListUnique = mapListUnique;
+		}
+	}
+
+	/// <summary>
+	/// возвращает варианты для голосования из текущего списка карт
+	/// </summary>
+	[ScriptType("FromSameMapList", ScriptModuleNames.NEW_GAME_VOTE_TYPES)]
+	[ScriptAllowed]
+	public sealed class FromSameMapList : INewGameVariantsRequest
+	{
+		/// <summary>
+		/// сколько вариантов запрашивается
+		/// <para>если вариантов указано большее или равное чем есть в текущем списке, то вернет все что есть в списке, так как повторы исключаются</para>
+		/// </summary>
+		public int Count { get; set; }
+
+		public FromSameMapList() { }
+		public FromSameMapList(int count)
+		{
+			Count = count;
+		}
+	}
+
+	/// <summary>
+	/// возвращает варианты для голосования из всех официальных списков карт
+	/// </summary>
+	[ScriptType("FromOfficialMapLists", ScriptModuleNames.NEW_GAME_VOTE_TYPES)]
+	[ScriptAllowed]
+	public sealed class FromOfficialMapLists : INewGameVariantsRequest
+	{
+		/// <summary>
+		/// сколько вариантов запрашивается
+		/// <para>если вариантов указано больше или равное количеству во всех списках, то вернет все что есть во всех списках, так как повторы исключаются</para>
+		/// </summary>
+		public int Count { get; set; }
+		/// <summary>
+		/// если истина, то текущий список карт не учитывается
+		/// </summary>
+		public bool ExcludeSameMapList { get; set; }
+
+		public FromOfficialMapLists() { }
+		public FromOfficialMapLists(int count, bool excludeSameMapList = false)
+		{
+			Count = count;
+			ExcludeSameMapList = excludeSameMapList;
+		}
+	}
+	#endregion
 
 	/// <summary>
 	/// сервис инициализации голосования за новую игру
@@ -87,6 +197,13 @@ namespace PixelCombats.Api.RoomServer.Services.NewGameVote
 		/// <param name="extraVariantsCount">количество вариантов для голосования, помимо текущего варианта (не более 10)</param>
 		/// </summary>
 		void Start(NewGameVoteStartParameters arg, int extraVariantsCount);
+		/// <summary>
+		/// запускает голосование за новую игру
+		/// <para>если голосование уже идет то ничего не происходит</para>
+		/// </summary>
+		/// <param name="variants">варианты голосования</param>
+		/// <param name="timer">время, отведенное на голосование</param>
+		void Start(INewGameVariantsRequest[] variants, double timer);
 
 		/// <summary>
 		/// изменилось <see cref="Data"/>

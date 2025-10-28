@@ -21,5 +21,10 @@
 		/// дебаг
 		/// </summary>
 		public const string DEBUG = "pixel_combats/debug";
+
+		/// <summary>
+		/// библиотека типов данных для голосования о новых играх
+		/// </summary>
+		public const string NEW_GAME_VOTE_TYPES = "pixel_combats/types/new_game_vote";
 	}
 }

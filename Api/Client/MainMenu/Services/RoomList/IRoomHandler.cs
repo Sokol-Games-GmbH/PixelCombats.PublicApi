@@ -77,6 +77,11 @@ namespace PixelCombats.Api.Client.MainMenu.Services.RoomList
 		public string NetworkVersion { get; }
 
 		/// <summary>
+		/// выбранный официальный список карт (если есть)
+		/// </summary>
+		long? MapListId { get; }
+
+		/// <summary>
 		/// попытка войти в комнату
 		/// </summary>
 		/// <param name="password">пароль комнаты</param>
